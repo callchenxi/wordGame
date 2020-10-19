@@ -1,0 +1,65 @@
+/* miniprogram/pages/index/index.wxss */
+page {
+  height: 100%
+}
+
+.msg {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 40%;
+}
+
+.root-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wealth {
+  position: fixed;
+  display: flex;
+  width: 400rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  left: 10rpx;
+  top: 4rpx;
+  border: 1px solid palevioletred;
+  border-radius: 44rpx;
+  text-align: center;
+}
+.wealth text {
+  flex-grow: 1;
+}
+
+.head {
+  background-color: aqua;
+  flex-grow: 1;
+}
+.body {
+  width: 750rpx;
+  height: 1080rpx;
+  background: url("https://vi0.xiu123.cn/live/2020/10/19/11/1003v1603076574723755262.jpg") no-repeat;
+  background-size: 100%;
+  background-position: 0 -20rpx;
+}
+
+.adventure {
+  position: relative;
+  background-color: coral;
+  height: 200rpx;
+}
+.adventure image {
+  width: 750rpx;
+  height: 100%;
+}
+.adventure button {
+  position: absolute;
+  left: 10rpx;
+  bottom: 10rpx;
+}
+
+.foot {
+  background-color: aqua;
+  flex-grow: 2;
+}

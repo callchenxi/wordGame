@@ -1,0 +1,19 @@
+<!--miniprogram/pages/index/index.wxml-->
+<block wx:if="{{msgShow}}">
+  <w-reward-msg title="{{msgTitle}}" content="{{msgContent}}" class="msg"/>
+</block>
+<view class="root-box">
+  <view class="wealth">
+    <text>学币: {{coin}}  </text>
+    <text>钻石: {{diamond}}</text>
+  </view>
+  <view class="head"></view>
+  <view class="body"></view>
+  <view class="adventure">
+    <image src="../../images/adv.gif" mode="scaleToFill"/>
+    <button size="mini" bind:tap="handleGetReward">领取奖励</button>
+  </view>
+  <view class="foot"></view>  
+</view>
+
+

@@ -1,0 +1,17 @@
+/* components/w-reward-msg/w-reward-msg.wxss */
+.box {
+  text-align: center;
+  /* background: url('https://vi3.xiu123.cn/live/2020/10/19/14/1003v1603087392995557637.jpg') no-repeat; */
+  /* background-size: 300rpx; */
+  background: #99999990;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+
+.box .title {
+  font-weight: 700;
+}
+
+.box .content {
+  font-size: 30rpx;
+}

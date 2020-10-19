@@ -1,6 +1,7 @@
 /* miniprogram/pages/index/index.wxss */
 page {
-  height: 100%
+  height: 100%;  
+  font-size: 32rpx;
 }
 
 .msg {
@@ -8,6 +9,7 @@ page {
   left: 50%;
   transform: translate(-50%, -50%);
   top: 40%;
+  z-index: 999;
 }
 
 .root-box {
@@ -27,6 +29,7 @@ page {
   border: 1px solid palevioletred;
   border-radius: 44rpx;
   text-align: center;
+  z-index: 99;
 }
 .wealth text {
   flex-grow: 1;
@@ -36,12 +39,30 @@ page {
   background-color: aqua;
   flex-grow: 1;
 }
+
 .body {
+  position: relative;
   width: 750rpx;
   height: 1080rpx;
   background: url("https://vi0.xiu123.cn/live/2020/10/19/11/1003v1603076574723755262.jpg") no-repeat;
   background-size: 100%;
   background-position: 0 -20rpx;
+}
+.body .entrance {
+  position: absolute;
+  display: inline-block;
+  font-size: 24rpx;
+  padding: 8rpx;
+  background-color: skyblue;
+  border-radius: 10rpx;
+}
+.body .study {
+  left: 200rpx;
+  top: 250rpx;
+}
+.body .exam {
+  left: 150rpx;
+  top: 450rpx;
 }
 
 .adventure {

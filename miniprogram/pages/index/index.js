@@ -13,6 +13,7 @@ Page({
     msgShow: false, 
   },
 
+  // 获取挂机奖励
   handleGetReward() {
     let now = Date.now();    
     let reward = calcTimeReward(now);
@@ -26,7 +27,11 @@ Page({
       title = '挂机奖励';
       coinReward = reward.coinReward;
       diamondReward = reward.diamondReward;
-      content= '+' + coinReward + '学币\n +' + diamondReward + '钻石'
+      if(diamondReward == 0) {
+        content= '+' + coinReward + '学币';
+      } else {
+        content= '+' + coinReward + '学币\n +' + diamondReward + '钻石';
+      }
     } else {
       title = '暂无挂机奖励可领';
     };
@@ -46,6 +51,7 @@ Page({
       })
     }, 700);
   },
+
   /**
    * 用户点击右上角分享
    */

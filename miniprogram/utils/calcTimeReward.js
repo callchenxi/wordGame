@@ -1,8 +1,9 @@
 import getRandomInt from './getRandomInt.js';
 
 export default function calcTimeReward(now) {
+  // 每分钟可得的coin数和diamond数
   const C_REWARD = 2;
-  const D_REWARD = 1;
+  const D_REWARD = 0.2;
 
   let last = wx.getStorageSync('hangDate');
   if(!last) {

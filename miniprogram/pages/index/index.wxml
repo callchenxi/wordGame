@@ -8,7 +8,10 @@
     <text>钻石: {{diamond}}</text>
   </view>
   <view class="head"></view>
-  <view class="body"></view>
+  <view class="body">
+    <navigator url="../study/study" class="entrance study">教室</navigator>
+    <navigator url="../exam/exam" class="entrance exam">自习室</navigator>
+  </view>
   <view class="adventure">
     <image src="../../images/adv.gif" mode="scaleToFill"/>
     <button size="mini" bind:tap="handleGetReward">领取奖励</button>

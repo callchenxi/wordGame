@@ -26,7 +26,6 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
@@ -58,8 +57,9 @@
           "query": ""
         },
         {
-          "name": "test",
-          "pathName": "pages/test/test",
+          "name": "exam",
+          "pathName": "pages/study/study",
+          "query": "",
           "scene": null
         }
       ]

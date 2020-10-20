@@ -1,60 +1,36 @@
 // pages/study/study.js
+import checkWordsEnd from '../../utils/checkWordsEnd.js';
+import splitEn from '../../utils/splitEn.js';
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    word: undefined,
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  handleKnow() {
+    let wid = parseInt(wx.getStorageSync('studyWid')) + 1;
+    checkWordsEnd(wid);    
+  },
 
+  // 生命周期函数--监听页面加载完成
+  onLoad: function(options) {
+    // 获取页面需要加载的单词
+    let words = require('../../data/words.js').wordsJson;
+    wx.setStorageSync('studyWid', options.wid);
+    this.setData({
+      // 调用接口3分割例句, 分离出目标单词
+      word: splitEn(words[options.wid]),
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
   },
 
   /**

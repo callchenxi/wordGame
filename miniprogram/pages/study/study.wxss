@@ -1,1 +1,61 @@
 /* pages/study/study.wxss */
+.spell-box {
+  background-color: aqua;
+  text-align: center;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #eeeeee;
+}
+.spell-box .spelling {
+  font-size: 50rpx;
+  font-weight: 700;
+}
+
+.trans-box {
+  background-color: aqua;
+  padding: 20rpx 0;  
+  text-indent: 1ch;
+}
+
+.exps-box {    
+  text-indent: 1ch;
+}
+.exps-box .exps-title{
+  font-size: 28rpx;
+  color: #999999;
+  background-color: #eeeeee;
+  padding: 10rpx 0;
+  margin-bottom: 20rpx;
+}
+.exps-box .exp {
+  padding-bottom: 20rpx;
+}
+
+.btns-box {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 40rpx;
+  text-align: center;
+}
+.btns-box view {
+  flex-grow: 1;
+  margin: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: white;
+  border-radius: 10rpx;
+  border: 1px solid #eeeeee;
+}
+.btns-box .know {
+  background-color: aquamarine;
+}
+.btns-box .vague {
+  background-color: orange;
+}
+.btns-box .forget {
+  background-color: orangered;
+}
+
+.point {
+  color: orangered;
+}

@@ -1,1 +1,60 @@
 /* pages/exam/exam.wxss */
+.spell-box {
+  background-color: aqua;
+  text-align: center;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #eeeeee;
+}
+.spell-box .spelling {
+  font-size: 50rpx;
+  font-weight: 700;
+}
+.spell-box .phs {
+  color: #666666;
+}
+
+.trans-box {
+  background-color: aqua;
+  padding: 20rpx 0;  
+  text-indent: 1ch;
+}
+
+.exps-box {    
+  text-indent: 1ch;
+}
+.exps-box .exps-title{
+  font-size: 28rpx;
+  color: #999999;
+  background-color: #eeeeee;
+  padding: 10rpx 0;
+  margin-bottom: 20rpx;
+}
+.exps-box .exp {
+  padding-bottom: 20rpx;
+}
+
+.btns-box {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 40rpx;
+  text-align: center;
+}
+.btns-box button {
+  flex-grow: 1;
+  margin: 20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 10rpx;
+  padding: 0;
+}
+
+.spellIpt {
+  position: absolute;
+  width: 0;
+  z-index: -1;
+}
+
+.point {
+  color: orangered;
+}

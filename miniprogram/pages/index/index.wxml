@@ -9,14 +9,14 @@
   </view>
   <view class="head"></view>
   <view class="body">
-    <navigator url="../study/study" class="entrance study">教室</navigator>
-    <navigator url="../exam/exam" class="entrance exam">自习室</navigator>
+    <view class="entrance study" bind:tap="handleToStudy">教室</view>
+    <view class="entrance exam" bind:tap="handleToExam">自习室</view>
   </view>
   <view class="adventure">
     <image src="../../images/adv.gif" mode="scaleToFill"/>
     <button size="mini" bind:tap="handleGetReward">领取奖励</button>
   </view>
-  <view class="foot"></view>  
+  <view class="foot"></view>
 </view>
 
 

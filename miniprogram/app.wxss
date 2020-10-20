@@ -1,1 +1,11 @@
 /**app.wxss**/
+page {
+  height: 100%;  
+  font-size: 32rpx;
+}
+
+.root-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

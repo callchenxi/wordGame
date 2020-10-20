@@ -1,2 +1,22 @@
 <!--pages/study/study.wxml-->
-<text>pages/study/study.wxml</text>
+<view class="root-box">
+  <view class="spell-box">
+    <view class="spelling">{{word.spelling}}</view>
+    <view>{{word.phoneticSym}}</view>
+  </view>
+  <view class="trans-box">
+    <view wx:for="{{word.translations}}" wx:key="item">{{item}}</view>
+  </view>
+  <view class="exps-box">
+    <view class="exps-title">例句</view>
+    <view wx:for="{{word.examples}}" wx:key="item" class="exp">
+      <view>{{item.en1}}<text class="point">{{item.en2}}</text>{{item.en3}}</view>
+      <view>{{item.ch}}</view>  
+    </view>
+  </view>
+  <view class="btns-box">
+    <view class="know" bind:tap="handleKnow">认识</view>
+    <view class="vague">模糊</view>
+    <view class="forget">忘记</view>
+  </view>
+</view>

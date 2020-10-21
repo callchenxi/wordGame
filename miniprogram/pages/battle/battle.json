@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "w-slot-machine": "../../components/w-slot-machine/w-slot-machine"
+  }
+}

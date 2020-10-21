@@ -1,0 +1,10 @@
+/* miniprogram/pages/battle/battle.wxss */
+.battlefield {
+  height: 700rpx;
+  background-color: chocolate;
+}
+
+.reward-box {
+  height: 500rpx;
+  background-color: violet;
+}

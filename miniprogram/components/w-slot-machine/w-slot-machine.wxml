@@ -1,0 +1,42 @@
+<!--components/w-slot-machine/w-slot-machine.wxml-->
+<view class="slot-machine">
+  <view class="windows">
+    <view class="win">
+      <view class="reward-list" id="left" style="{{leftTop}}">
+        <image src="../../images/fragment.svg" class="reward-img"></image>
+        <image src="../../images/coin.svg" class="reward-img"></image>
+        <image src="../../images/diamond.svg" class="reward-img"></image>
+        <image src="../../images/treasure.svg" class="reward-img"></image>
+        <image src="../../images/fragment.svg" class="reward-img"></image>
+        <image src="../../images/coin.svg" class="reward-img"></image>
+        <image src="../../images/diamond.svg" class="reward-img"></image>
+      </view>         
+    </view>
+    <view class="win">
+      <view class="reward-list" id="center" style="{{centerTop}}">
+        <image src="../../images/fragment.svg" class="reward-img"></image>
+        <image src="../../images/coin.svg" class="reward-img"></image>
+        <image src="../../images/diamond.svg" class="reward-img"></image>
+        <image src="../../images/treasure.svg" class="reward-img"></image>
+        <image src="../../images/fragment.svg" class="reward-img"></image>
+        <image src="../../images/coin.svg" class="reward-img"></image>
+        <image src="../../images/diamond.svg" class="reward-img"></image>
+      </view>
+    </view>
+    <view class="win">
+      <view class="reward-list" id="right" style="{{rightTop}}">
+        <image src="../../images/fragment.svg" class="reward-img"></image>
+        <image src="../../images/coin.svg" class="reward-img"></image>
+        <image src="../../images/diamond.svg" class="reward-img"></image>
+        <image src="../../images/treasure.svg" class="reward-img"></image>
+        <image src="../../images/fragment.svg" class="reward-img"></image>
+        <image src="../../images/coin.svg" class="reward-img"></image>
+        <image src="../../images/diamond.svg" class="reward-img"></image>
+      </view>
+    </view>
+  </view>
+  <view class="handleBtn" bind:tap="handlePlay" wx:if="{{isGo}}">Go</view>
+  <view class="handleBtn" bind:tap="handleStop" wx:else>Stop</view>
+  <view class="reward-text"></view>
+</view>
+<!-- 图片大小: 50px * 50px -->

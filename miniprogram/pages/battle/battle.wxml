@@ -1,0 +1,12 @@
+<!--miniprogram/pages/battle/battle.wxml-->
+<view class="root-box">
+  <view class="head"></view>
+  <view class="body">
+    <view class="battlefield"> 
+    </view>
+    <view class="reward-box">
+      <w-slot-machine></w-slot-machine>     
+    </view>
+  </view>
+  <view class="foot"></view>
+</view>

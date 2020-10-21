@@ -15,7 +15,7 @@
   line-height: 44rpx;
   left: 10rpx;
   top: 4rpx;
-  border: 1px solid palevioletred;
+  border: 2rpx solid palevioletred;
   border-radius: 44rpx;
   text-align: center;
   z-index: 99;
@@ -24,20 +24,14 @@
   flex-grow: 1;
 }
 
-.head {
-  background-color: aqua;
-  flex-grow: 1;
-}
-
-.body {
+.buildings {
   position: relative;
-  width: 750rpx;
-  height: 1080rpx;
+  height: 1000rpx;
   background: url("https://vi0.xiu123.cn/live/2020/10/19/11/1003v1603076574723755262.jpg") no-repeat;
   background-size: 100%;
   background-position: 0 -20rpx;
 }
-.body .entrance {
+.buildings .entrance {
   position: absolute;
   display: inline-block;
   font-size: 24rpx;
@@ -45,13 +39,17 @@
   background-color: skyblue;
   border-radius: 10rpx;
 }
-.body .study {
+.buildings .study {
   left: 200rpx;
   top: 250rpx;
 }
-.body .exam {
+.buildings .exam {
   left: 150rpx;
   top: 450rpx;
+}
+.buildings .team {
+  left: 130rpx;
+  top: 750rpx;
 }
 
 .adventure {
@@ -67,9 +65,4 @@
   position: absolute;
   left: 10rpx;
   bottom: 10rpx;
-}
-
-.foot {
-  background-color: aqua;
-  flex-grow: 2;
 }

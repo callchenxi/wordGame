@@ -1,2 +1,5 @@
 <!--pages/test/test.wxml-->
-<w-reward-msg title="获得挂机奖励" content="+100 学币"/>
+<w-reward-msg title="获得挂机奖励" content="{{rewards1}}"/>
+<w-reward-msg title="获得挂机奖励" content="{{rewards2}}" style="display: inline-block"/>
+<w-reward-msg title="获得挂机奖励" content="{{rewards3}}"/>
+<w-reward-msg title="获得挂机奖励" content=" "/>

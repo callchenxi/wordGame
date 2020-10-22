@@ -7,10 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    coin: 0,
-    diamond: 0,
+    coin: wx.getStorageSync('coin') || 0,
+    diamond: wx.getStorageSync('diamond') || 0,
     msgTitle: "",
-    msgContent: "",
+    msgContent: {},
     msgShow: false, 
   },
 
@@ -21,7 +21,7 @@ Page({
     let reward = calcTimeReward(now, last);
 
     let title = '';
-    let content = '';
+    let content = {};
     let coinReward = 0;
     let diamondReward = 0;
 
@@ -31,12 +31,14 @@ Page({
       coinReward = reward.coinReward;
       diamondReward = reward.diamondReward;
       if(diamondReward == 0) {
-        content= '+' + coinReward + '学币';
+        content.coin =  coinReward;
       } else {
-        content= '+' + coinReward + '学币\n +' + diamondReward + '钻石';
+        content.coin =  coinReward;
+        content.diamond =  diamondReward;
       }
     } else {
       title = '暂无挂机奖励可领';
+      content = ''
     };
 
     // 弹出奖励弹窗

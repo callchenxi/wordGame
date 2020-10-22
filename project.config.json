@@ -61,6 +61,12 @@
           "pathName": "pages/battle/battle",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "test",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
         }
       ]
     }

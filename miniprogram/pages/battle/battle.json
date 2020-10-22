@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "w-slot-machine": "../../components/w-slot-machine/w-slot-machine"
+    "w-slot-machine": "../../components/w-slot-machine/w-slot-machine",
+    "w-wealth-box": "../../components/w-wealth-box/w-wealth-box"
   }
 }

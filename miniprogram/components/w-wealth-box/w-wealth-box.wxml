@@ -1,0 +1,8 @@
+<!--components/w-wealth-box/w-wealth-box.wxml-->
+<view class="wealth">
+  <!-- 支持最多7位数 -->
+  <image src="../../images/coin.svg" class="icon"></image>
+  <view class="txt">{{coin}}</view>
+  <image src="../../images/diamond.svg" class="icon"></image>
+  <view class="txt">{{diamond}}</view>
+  </view>

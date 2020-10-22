@@ -16,3 +16,19 @@
 .box .content {
   font-size: 30rpx;
 }
+
+.box .icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.box .icon-large {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.box .flex-center {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -7,23 +7,6 @@
   z-index: 999;
 }
 
-.wealth {
-  position: fixed;
-  display: flex;
-  width: 400rpx;
-  height: 44rpx;
-  line-height: 44rpx;
-  left: 10rpx;
-  top: 4rpx;
-  border: 2rpx solid palevioletred;
-  border-radius: 44rpx;
-  text-align: center;
-  z-index: 99;
-}
-.wealth text {
-  flex-grow: 1;
-}
-
 .buildings {
   position: relative;
   height: 1000rpx;
@@ -50,6 +33,10 @@
 .buildings .team {
   left: 130rpx;
   top: 750rpx;
+}
+.buildings .battle {
+  right: 150rpx;
+  top: 200rpx;
 }
 
 .adventure {

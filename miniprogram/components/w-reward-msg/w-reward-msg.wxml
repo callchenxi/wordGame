@@ -2,8 +2,33 @@
 
 <view class="box">
   <text class="title">{{title}}</text>
-  <view style="width: 20rpx"></view>
-  <text class="content">{{content}}</text>
+  <!-- 换行用 -->
+  <view style="height: 20rpx" wx:if="{{content}}"></view>
+  <view class="content">
+    <block wx:for="{{content}}" wx:key="item">
+      <view wx:if="{{index == 'treasure'}}" class="flex-center" style="display: flex">
+        <block wx:for="{{item}}" wx:for-item="sitem" wx:for-index="sindex"  wx:key="sitem">
+          <view wx:if="{{sindex == 'num'}}" class="flex-center">
+            <image src="../../images/treasure.svg" class="icon-large" />
+            <text decode="true">&nbsp;:&nbsp;</text>
+          </view>
+          <view class="flex-center" wx:else>
+            <image src="../../images/coin.svg" class="icon" wx:if="{{sindex == 'coin'}}" />
+            <image src="../../images/diamond.svg" class="icon" wx:elif="{{sindex == 'diamond'}}" />
+            <image src="../../images/medal.svg" class="icon" wx:elif="{{sindex == 'medal'}}" />
+            <text decode="true">&nbsp;{{sitem}}&nbsp;&nbsp;</text>
+          </view>
+        </block>
+      </view>
+      <view class="flex-center" wx:else>
+          <image src="../../images/coin.svg" class="icon" wx:if="{{index == 'coin'}}" />
+          <image src="../../images/diamond.svg" class="icon" wx:elif="{{index == 'diamond'}}" />
+          <image src="../../images/medal.svg" class="icon" wx:elif="{{index == 'medal'}}" />
+          <text decode="true">&nbsp;{{item}}&nbsp;&nbsp;</text>
+      </view>
+     
+    </block>
+  </view>
 </view>
 
 

@@ -3,16 +3,14 @@
   <w-reward-msg title="{{msgTitle}}" content="{{msgContent}}" class="msg"/>
 </block>
 <view class="root-box">
-  <view class="wealth">
-    <text>学币: {{coin}}  </text>
-    <text>钻石: {{diamond}}</text>
-  </view>
+  <w-wealth-box coin="{{coin}}" diamond="{{diamond}}"></w-wealth-box>
   <view class="head"></view>
   <view class="body">
     <view class="buildings">
       <view class="entrance study" bind:tap="handleToStudy">教室</view>
       <view class="entrance exam" bind:tap="handleToExam">自习室</view>
       <view class="entrance team" bind:tap="handleToTeam">宿舍</view>
+      <navigator url="../battle/battle" open-type="redirect" class="entrance battle" >战斗</navigator>
     </view>
     <view class="adventure">
       <image src="../../images/adv.gif" mode="scaleToFill"/>

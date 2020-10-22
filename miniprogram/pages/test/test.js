@@ -5,7 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    rewards1: {
+      'coin': 100,
+      'diamond': 10,
+      'medal': 5,
+      'treasure': {
+        'num': 3,
+        'coin': 100,
+        'diamond': 10,
+        'medal': 5,
+      } 
+    },
+    rewards2: {
+      'coin': 100,      
+      'treasure': {
+        'num': 9,
+        'coin': 1000,
+        'diamond': 9910,
+        'medal': 5555,
+      } 
+    },
+    rewards3: {
+      'coin': 100,
+      'diamond': 10,      
+    }
   },
 
   /**

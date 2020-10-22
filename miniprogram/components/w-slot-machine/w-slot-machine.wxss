@@ -48,4 +48,13 @@
   height: 100rpx;
   background-color: goldenrod;
 }
+.slot-machine .msg {
+  position: fixed;  
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 30%;
+  z-index: 999;
+  /* 迫不得已设置的 */
+  width: 508rpx;
+}
 

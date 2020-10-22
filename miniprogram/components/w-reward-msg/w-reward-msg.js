@@ -9,8 +9,7 @@ Component({
       value: '标题'
     },
     content: {
-      type: String,
-      value: '内容'
+      type: Object,
     },
   },
 

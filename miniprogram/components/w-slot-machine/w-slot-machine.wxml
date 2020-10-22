@@ -1,42 +1,46 @@
 <!--components/w-slot-machine/w-slot-machine.wxml-->
-<view class="slot-machine">
+<view class="slot-machine">  
+  <w-wealth-box coin="{{coin}}" diamond="{{diamond}}"></w-wealth-box>
+  <block wx:if="{{msgShow}}">
+    <w-reward-msg title="{{msgTitle}}" content="{{msgContent}}" class="msg"/>
+  </block>
   <view class="windows">
     <view class="win">
       <view class="reward-list" id="left" style="{{leftTop}}">
-        <image src="../../images/fragment.svg" class="reward-img"></image>
+        <image src="../../images/treasure.svg" class="reward-img"></image>
         <image src="../../images/coin.svg" class="reward-img"></image>
         <image src="../../images/diamond.svg" class="reward-img"></image>
+        <image src="../../images/medal.svg" class="reward-img"></image>
         <image src="../../images/treasure.svg" class="reward-img"></image>
-        <image src="../../images/fragment.svg" class="reward-img"></image>
         <image src="../../images/coin.svg" class="reward-img"></image>
         <image src="../../images/diamond.svg" class="reward-img"></image>
       </view>         
     </view>
     <view class="win">
       <view class="reward-list" id="center" style="{{centerTop}}">
-        <image src="../../images/fragment.svg" class="reward-img"></image>
+        <image src="../../images/treasure.svg" class="reward-img"></image>
         <image src="../../images/coin.svg" class="reward-img"></image>
         <image src="../../images/diamond.svg" class="reward-img"></image>
+        <image src="../../images/medal.svg" class="reward-img"></image>
         <image src="../../images/treasure.svg" class="reward-img"></image>
-        <image src="../../images/fragment.svg" class="reward-img"></image>
         <image src="../../images/coin.svg" class="reward-img"></image>
         <image src="../../images/diamond.svg" class="reward-img"></image>
       </view>
     </view>
     <view class="win">
       <view class="reward-list" id="right" style="{{rightTop}}">
-        <image src="../../images/fragment.svg" class="reward-img"></image>
+        <image src="../../images/treasure.svg" class="reward-img"></image>
         <image src="../../images/coin.svg" class="reward-img"></image>
         <image src="../../images/diamond.svg" class="reward-img"></image>
+        <image src="../../images/medal.svg" class="reward-img"></image>
         <image src="../../images/treasure.svg" class="reward-img"></image>
-        <image src="../../images/fragment.svg" class="reward-img"></image>
         <image src="../../images/coin.svg" class="reward-img"></image>
         <image src="../../images/diamond.svg" class="reward-img"></image>
       </view>
     </view>
   </view>
-  <view class="handleBtn" bind:tap="handlePlay" wx:if="{{isGo}}">Go</view>
-  <view class="handleBtn" bind:tap="handleStop" wx:else>Stop</view>
+  <view class="handleBtn" bind:tap="handlePlay" wx:if="{{isGo}}">开始</view>
+  <view class="handleBtn" wx:else>稍等</view>
   <view class="reward-text"></view>
 </view>
 <!-- 图片大小: 50px * 50px -->

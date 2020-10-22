@@ -1,4 +1,7 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {  
+    "w-wealth-box": "../../components/w-wealth-box/w-wealth-box",
+    "w-reward-msg": "../../components/w-reward-msg/w-reward-msg"
+  }
 }

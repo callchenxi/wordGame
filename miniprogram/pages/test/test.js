@@ -27,8 +27,14 @@ Page({
     },
     rewards3: {
       'coin': 100,
-      'diamond': 10,      
-    }
+      'diamond': 10,
+      'treasure': {
+        'student': true
+      }
+    },
+    rewards4: {
+      'txt': '无法获得战斗奖励'
+    },
   },
 
   /**

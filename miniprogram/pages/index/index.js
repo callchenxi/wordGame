@@ -7,8 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    coin: wx.getStorageSync('coin') || 0,
-    diamond: wx.getStorageSync('diamond') || 0,
+    coin: -1,
+    diamond: -1,
     msgTitle: "",
     msgContent: {},
     msgShow: false, 
@@ -78,9 +78,14 @@ Page({
       // 没有则记录时间戳,
       wx.setStorageSync('hangDate', Date.now()); 
     }
+
+    // 读取storage里面的货币数量
+    this.setData({
+      coin: wx.getStorageSync('coin') || 0,
+      diamond: wx.getStorageSync('diamond') || 0,
+    })
   },
-
-
+  
   /**
    * 用户点击右上角分享
    */

@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "w-slot-machine": "../../components/w-slot-machine/w-slot-machine",
-    "w-wealth-box": "../../components/w-wealth-box/w-wealth-box"
+    "w-wealth-box": "../../components/w-wealth-box/w-wealth-box",
+    "w-reward-msg": "../../components/w-reward-msg/w-reward-msg",
+    "w-battle-scence": "../../components/w-battle-scence/w-battle-scence",
+    "w-slot-machine": "../../components/w-slot-machine/w-slot-machine"
   }
 }

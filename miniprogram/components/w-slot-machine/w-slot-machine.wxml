@@ -1,9 +1,5 @@
 <!--components/w-slot-machine/w-slot-machine.wxml-->
-<view class="slot-machine">  
-  <w-wealth-box coin="{{coin}}" diamond="{{diamond}}"></w-wealth-box>
-  <block wx:if="{{msgShow}}">
-    <w-reward-msg title="{{msgTitle}}" content="{{msgContent}}" class="msg"/>
-  </block>
+<view class="slot-machine">
   <view class="windows">
     <view class="win">
       <view class="reward-list" id="left" style="{{leftTop}}">
@@ -39,8 +35,10 @@
       </view>
     </view>
   </view>
-  <view class="handleBtn" bind:tap="handlePlay" wx:if="{{isGo}}">开始</view>
-  <view class="handleBtn" wx:else>稍等</view>
+  <block wx:if="{{false}}">
+    <view class="handleBtn" bind:tap="handlePlay" wx:if="{{isGo}}">开始</view>
+    <view class="handleBtn" wx:else>稍等</view>
+  </block>  
   <view class="reward-text"></view>
 </view>
 <!-- 图片大小: 50px * 50px -->

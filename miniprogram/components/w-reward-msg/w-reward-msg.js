@@ -1,5 +1,8 @@
 // components/w-reward-msg/w-reward-msg.js
 Component({
+  options: {
+    multipleSlots: true,
+  },
   /**
    * 组件的属性列表
    */
@@ -11,6 +14,9 @@ Component({
     content: {
       type: Object,
     },
+    btns: {
+      type: Array,
+    }
   },
 
   /**

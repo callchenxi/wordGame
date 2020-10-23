@@ -20,15 +20,15 @@
           </view>
         </block>
       </view>
-      <view class="flex-center" wx:else>
+      <view wx:else class="flex-center">
           <image src="../../images/coin.svg" class="icon" wx:if="{{index == 'coin'}}" />
           <image src="../../images/diamond.svg" class="icon" wx:elif="{{index == 'diamond'}}" />
           <image src="../../images/medal.svg" class="icon" wx:elif="{{index == 'medal'}}" />
           <text decode="true">&nbsp;{{item}}&nbsp;&nbsp;</text>
-      </view>
-     
+      </view>     
     </block>
   </view>
+  <slot name="btns" />   
 </view>
 
 

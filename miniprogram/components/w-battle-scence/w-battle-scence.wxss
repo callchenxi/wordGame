@@ -1,0 +1,77 @@
+/* components/w-battle-scence/w-battle-scence.wxss */
+.battle-scence {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60rpx;
+  background-color: green;
+}
+.battle-scence .team {
+  width: 360rpx;
+  height: 700rpx;
+}
+.battle-scence .team .pic-box {
+  position: relative;
+  height: 120rpx;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+}
+
+.battle-scence .us {
+  background-color: cornflowerblue;
+}
+.battle-scence .us .title {
+  text-align: left;
+  padding-left: 20rpx;
+}
+.battle-scence .us .pic-h {
+  position: absolute;
+  width: 360rpx;
+  top: -50rpx;
+  left: -40rpx;
+}
+/* 我方攻击动画 */
+.us .attack {
+  animation-name: us-attack;
+  animation-duration: .1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+} 
+@keyframes us-attack {
+  from{
+    left: -40rpx;
+  }
+  to{
+    left: 0;
+  }
+}
+
+.battle-scence .enemies {
+  background-color: brown;
+}
+.battle-scence .enemies .title {
+  text-align: right;
+  padding-right: 20rpx;
+}
+.battle-scence .enemies .pic-h {
+  position: absolute;
+  width: 360rpx;
+  top: -50rpx;
+  right: -40rpx;
+}
+/* 敌方攻击动画 */
+.enemies .attack {
+  animation-name: en-attack;
+  animation-duration: .1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+} 
+@keyframes en-attack {
+  from{
+    right: -40rpx;
+  }
+  to{
+    right: 0;
+  }
+}

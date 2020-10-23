@@ -1,0 +1,21 @@
+<!--components/w-battle-scence/w-battle-scence.wxml-->
+<view class="battle-scence">
+  <view class="team us">
+    <view class="title">我方 HP: {{usHp}}</view>
+    <view class="pic-box" wx:for="{{us}}" wx:key="name">
+      <image src="{{item.picH}}" 
+           class="pic-h {{usAttack[index]}}" mode="widthFix"></image>
+    </view>
+  </view>
+  <view class="team enemies">
+    <view class="title">敌方 HP: {{enHp}}</view>
+    <view class="pic-box" wx:for="{{enemies}}" wx:key="name">
+      <image src="{{item.picH}}" 
+           class="pic-h {{enAttack[index]}}" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+<block wx:if="{{false}}">
+  <button bind:tap="handleFight">test</button>
+</block>
+

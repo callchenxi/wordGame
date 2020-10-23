@@ -1,5 +1,8 @@
 <!--pages/test/test.wxml-->
 <w-reward-msg title="获得挂机奖励" content="{{rewards1}}"/>
-<w-reward-msg title="获得挂机奖励" content="{{rewards2}}" style="display: inline-block"/>
+<w-reward-msg title="获得挂机奖励" content="{{rewards2}}" style="display: inline-block">
+  <button slot="btns">确定</button>
+</w-reward-msg>
 <w-reward-msg title="获得挂机奖励" content="{{rewards3}}"/>
+<w-reward-msg title="获得挂机奖励" content="{{rewards4}}"/>
 <w-reward-msg title="获得挂机奖励" content=" "/>

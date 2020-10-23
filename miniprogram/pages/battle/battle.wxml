@@ -1,11 +1,21 @@
 <!--miniprogram/pages/battle/battle.wxml-->
-<view class="root-box">
+<view class="root-box">  
+  <w-wealth-box coin="{{coin}}" diamond="{{diamond}}" />
+  <block wx:if="{{msgShow}}">
+    <w-reward-msg title="{{msgTitle}}" content="{{msgContent}}" class="msg">
+      <view class="slot" slot="btns">
+        <button bind:tap="handleToIndex" class="slot-btn">确定</button>
+      </view>      
+    </w-reward-msg>
+  </block>
   <view class="head"></view>
   <view class="body">
     <view class="battlefield"> 
+      <w-battle-scence id="battle" bind:isWin="isWin"></w-battle-scence>
     </view>
+    <button class="fight-btn" bind:tap="handleStart" disabled="{{isFight}}">开始战斗</button>
     <view class="reward-box">
-      <w-slot-machine></w-slot-machine>     
+      <w-slot-machine bind:getWealth="getWealth" id="reward"></w-slot-machine>     
     </view>
   </view>
   <view class="foot"></view>

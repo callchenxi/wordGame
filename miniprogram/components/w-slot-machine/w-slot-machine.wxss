@@ -14,7 +14,7 @@
   align-items: center;
   width: 500rpx;
   height: 300rpx;
-  margin: 50rpx 50rpx 50rpx;
+  margin: 80rpx auto 10rpx;
   padding-right: 5rpx;
   background-color: tomato;
 }
@@ -41,20 +41,8 @@
   margin: 0 auto;
 }
 .slot-machine .handleBtn {
-  position: absolute;
-  right: 30rpx;
-  top: 150rpx;
   width: 100rpx;
-  height: 100rpx;
+  height: 50rpx;
   background-color: goldenrod;
-}
-.slot-machine .msg {
-  position: fixed;  
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 30%;
-  z-index: 999;
-  /* 迫不得已设置的 */
-  width: 508rpx;
 }
 

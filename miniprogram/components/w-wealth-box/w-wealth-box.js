@@ -8,14 +8,18 @@ Component({
       type: Number,
       // 自动监听,写入更新数据
       observer: function(newVal) {
-        wx.setStorageSync('coin', newVal);
+        if(newVal > 0) {
+          wx.setStorageSync('coin', newVal);
+        }        
       }
     },
     diamond: {
       type: Number,
       // 自动监听,写入更新数据
       observer: function(newVal) {
-        wx.setStorageSync('diamond', newVal);
+        if(newVal > 0) {
+          wx.setStorageSync('diamond', newVal);
+        } 
       }
     }
   },

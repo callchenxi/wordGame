@@ -70,6 +70,12 @@ Page({
     })
   },
 
+  handleToTeam() {
+    wx.redirectTo({
+      url: '../lineup/lineup',
+    })
+  },
+
   // 生命周期函数--监听页面加载完成
   onLoad: function(options) {    
     // 判断是否有时间戳

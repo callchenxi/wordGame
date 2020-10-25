@@ -23,7 +23,7 @@ export default function calcTimeReward(now, last) {
     } else {
       // 间隔超过1分钟, 则计算奖励
       let coinReward = C_REWARD * duration;
-      let diamondReward = getRandomInt(0, D_REWARD * duration)
+      let diamondReward = getRandomInt(D_REWARD * duration / 10 , D_REWARD * duration)
       // 重新保存时间戳
       wx.setStorageSync('hangDate', now); 
       // 返回true及奖励值

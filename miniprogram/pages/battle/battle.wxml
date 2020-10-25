@@ -9,14 +9,16 @@
     </w-reward-msg>
   </block>
   <view class="head"></view>
-  <view class="body">
-    <view class="battlefield"> 
-      <w-battle-scence id="battle" bind:isWin="isWin"></w-battle-scence>
-    </view>
+  <view class="battlefield"> 
+    <w-battle-scence id="battle" bind:isWin="isWin"></w-battle-scence>
+  </view>
+  <view class="body-blank"></view>  
+  <view>
     <button class="fight-btn" bind:tap="handleStart" disabled="{{isFight}}">开始战斗</button>
-    <view class="reward-box">
-      <w-slot-machine bind:getWealth="getWealth" id="reward"></w-slot-machine>     
-    </view>
+  </view>
+  <view class="body-blank"></view>  
+  <view class="reward-box">
+    <w-slot-machine bind:getWealth="getWealth" id="reward"></w-slot-machine>     
   </view>
   <view class="foot"></view>
 </view>

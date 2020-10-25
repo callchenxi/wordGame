@@ -1,0 +1,40 @@
+/* miniprogram/pages/lineup/lineup.wxss */
+.team-list{
+  display: flex;
+  width: 720rpx;
+  margin: 0 auto;
+}
+.team-box .team {
+  position: relative;
+  background-color: goldenrod;
+  text-align: center;
+  padding-bottom: 4rpx;
+}
+.team-box .team-pic {
+  width: 140rpx;
+  padding: 0 2rpx;
+}
+.pic-border {
+  position: absolute;
+  left: 0; 
+  z-index: 99;  
+}
+.stu-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 720rpx;
+  margin: 0 auto;
+}
+.stu-box .stu {
+  position: relative;
+}
+.stu-box .stu-pic {
+  width: 112rpx; 
+  padding: 0 4rpx;
+}
+.backup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+}

@@ -18,6 +18,11 @@ page {
   width: 750rpx;
   height: 1200rpx;
 }
+.root-box .body-blank {
+  background-color: aqua;
+  flex-grow: .5;
+}
+
 .root-box .foot {
   background-color: aqua;
   flex-grow: 2;

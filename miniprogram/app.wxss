@@ -27,3 +27,12 @@ page {
   background-color: aqua;
   flex-grow: 2;
 }
+
+.root-box .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: #333333;
+  opacity: .8;
+}

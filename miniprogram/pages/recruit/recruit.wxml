@@ -1,0 +1,36 @@
+<!--pages/recruit/recruit.wxml-->
+<view class="root-box">
+  <view class="mask" hidden="{{maskHid}}"></view>
+  <view class="body-blank"></view>
+  <view class="title">社团招新</view>  
+  <view class="body-blank"></view>
+  <view class="cards-box">
+    <image class="cards" src="../../images/cards-back.png" mode="aspectFill"></image>
+    <image class="temp-card" src="{{cardSrc}}"  mode="aspectFill" style="{{cardStyle}}"></image>
+    <view class="nine-box" wx:if="{{nineShow}}">
+      <view wx:for="{{cardsNine}}" wx:key="item" class="each-box">
+        <image class="nine-img" src="{{item.src}}" mode="widthFix"></image>
+        <image class="cover" src="{{cardSrc}}" mode="aspectFill" style="{{item.style}}"></image>
+      </view>
+    </view>
+    
+    <button bind:tap="handleConfirm" hidden="{{btnHid}}" class="confirm-btn">确定</button>
+  </view>
+  <view class="body-blank"></view>  
+  <view class="body-blank"></view>
+  <view class="btns-box">
+    <view>
+      <button size="mini" bind:tap="handleOne">单抽</button>
+      <view>150
+        <image class="icon" src="../../images/diamond.svg"></image>
+      </view>
+    </view>
+    <view>
+      <button size="mini" bind:tap="handleNine">九连</button>
+      <view>1200
+        <image class="icon" src="../../images/diamond.svg"></image>
+      </view>
+    </view>
+  </view>
+  <view class="foot"></view>
+</view>

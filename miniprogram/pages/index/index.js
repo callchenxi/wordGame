@@ -76,6 +76,12 @@ Page({
     })
   },
 
+  handleToRecruit() {
+    wx.redirectTo({
+      url: '../recruit/recruit',
+    })
+  },
+
   // 生命周期函数--监听页面加载完成
   onLoad: function(options) {    
     // 判断是否有时间戳

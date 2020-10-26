@@ -38,6 +38,10 @@
   right: 150rpx;
   top: 200rpx;
 }
+.buildings .recruit {
+  right: 130rpx;
+  top: 600rpx;
+}
 
 .adventure {
   position: relative;

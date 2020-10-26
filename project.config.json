@@ -57,8 +57,8 @@
           "query": ""
         },
         {
-          "name": "lineup",
-          "pathName": "pages/lineup/lineup",
+          "name": "recruit",
+          "pathName": "pages/recruit/recruit",
           "query": "",
           "scene": null
         },

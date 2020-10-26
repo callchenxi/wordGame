@@ -5,7 +5,8 @@
     "pages/exam/exam",
     "pages/test/test",
     "pages/battle/battle",
-    "pages/lineup/lineup"
+    "pages/lineup/lineup",
+    "pages/recruit/recruit"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

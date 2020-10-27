@@ -1,4 +1,5 @@
 // miniprogram/pages/lineup/lineup.js
+import showMyMems from '../../utils/showMyMems.js';
 Page({
 
   /**
@@ -102,11 +103,12 @@ Page({
    */
   onLoad: function (options) {
     // 获取学员数据
-    let students = require('../../data/students.js').studentsJson;
+    let students = showMyMems();
     if(wx.getStorageSync('team')) {
       this.data.team = wx.getStorageSync('team');
     } else {
-      for(let i=0; i<5; i++) {
+      this.data.team = [{},{},{},{},{}];
+      for(let i in students) {
         this.data.team[i] = students[i]
       }
     }

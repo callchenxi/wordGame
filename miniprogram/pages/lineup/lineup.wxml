@@ -17,6 +17,9 @@
           <view>{{index == 0 ? '队长' : '队员'}}</view>  
         </view>
     </view>
+    <view class="team-props">
+    队伍属性
+    </view>
   </view>
   <view class="body-blank"></view>
   <view class="stu-box">

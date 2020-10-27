@@ -19,17 +19,23 @@
   left: 0; 
   z-index: 99;  
 }
-.stu-list {
+
+.stu-box {
+  position: relative;
+  height: 400rpx;
+  overflow: hidden;
+}
+.stu-box .stu-list {
   display: flex;
   flex-wrap: wrap;
   width: 720rpx;
   margin: 0 auto;
 }
-.stu-box .stu {
+.stu-list .stu {
   position: relative;
 }
-.stu-box .stu-pic {
-  width: 112rpx; 
+.stu-list .stu-pic {
+  width: 110rpx; 
   padding: 0 4rpx;
 }
 .backup {

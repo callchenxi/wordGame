@@ -2,23 +2,23 @@ var json = [
   {
     bid: 0,
     title: 'white',
-    imgB:  '',
+    picB: 'https://patchwiki.biligame.com/images/sssj/5/5c/oqwtp12etdxcg2ulyv90l1pxe5c2pp0.png',
   },{
     bid: 1,
     titletxt: 'blue',
-    imgB: '',
+    picB: 'https://patchwiki.biligame.com/images/sssj/2/25/p7djrc83g23ywk4u13m1i72pcdcmu3c.png',
   },{
     bid: 2,
     title: 'purple',
-    imgB: 'https://patchwiki.biligame.com/images/sssj/0/07/ps8z6na6rzfa5dwqzvla4ppdy9wt1me.png',
+    picB: 'https://patchwiki.biligame.com/images/sssj/0/07/ps8z6na6rzfa5dwqzvla4ppdy9wt1me.png',
   },{
     bid: 3,
     title: 'golden',
-    imgB: 'https://patchwiki.biligame.com/images/sssj/7/74/iwxn9vnqtmv1gk6oobtq1of5n63jdds.png',
+    picB: 'https://patchwiki.biligame.com/images/sssj/7/74/iwxn9vnqtmv1gk6oobtq1of5n63jdds.png',
   },{
     bid: 4,
     title: 'red-1',
-    imgB: ''
+    picB: ''
   }
 ]
 

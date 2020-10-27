@@ -1,3 +1,5 @@
+import showMyMems from '../../utils/showMyMems.js';
+
 // pages/test/test.js
 Page({
 
@@ -5,43 +7,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    rewards1: {
-      'coin': 100,
-      'diamond': 10,
-      'medal': 5,
-      'treasure': {
-        'num': 3,
-        'coin': 100,
-        'diamond': 10,
-        'medal': 5,
-      } 
-    },
-    rewards2: {
-      'coin': 100,      
-      'treasure': {
-        'num': 9,
-        'coin': 1000,
-        'diamond': 9910,
-        'medal': 5555,
-      } 
-    },
-    rewards3: {
-      'coin': 100,
-      'diamond': 10,
-      'treasure': {
-        'student': true
-      }
-    },
-    rewards4: {
-      'txt': '无法获得战斗奖励'
-    },
+    showMembers: Array(),
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let showMembers = showMyMems();
+    this.setData({
+      showMembers
+    })
+    console.log(showMembers);
+    
   },
 
   /**

@@ -1,8 +1,17 @@
 <!--pages/test/test.wxml-->
-<w-reward-msg title="获得挂机奖励" content="{{rewards1}}"/>
-<w-reward-msg title="获得挂机奖励" content="{{rewards2}}" style="display: inline-block">
-  <button slot="btns">确定</button>
-</w-reward-msg>
-<w-reward-msg title="获得挂机奖励" content="{{rewards3}}"/>
-<w-reward-msg title="获得挂机奖励" content="{{rewards4}}"/>
-<w-reward-msg title="获得挂机奖励" content=" "/>
+<view class="stu-box">
+    <view>学员一览:</view>
+    <view class="stu-list">
+      <view wx:for="{{showMembers}}" wx:key="sid" class="stu" data-index="{{index}}"
+            bind:touchmove="handleMove" bind:touchend="handleMoveEnd">
+        <view>
+          <image src="{{item.picB}}" class="stu-pic pic-border" mode="widthFix"></image>  
+          <image src="{{item.pic}}" class="stu-pic" mode="widthFix"></image>
+        </view>
+        <view class="backup" style="{{currentIndex == index ? moveStyle : ''}}">
+          <image src="{{item.picB}}" class="stu-pic pic-border" mode="widthFix"></image>  
+          <image src="{{item.pic}}" class="stu-pic" mode="widthFix" ></image>
+        </view>
+      </view>
+    </view>
+  </view>

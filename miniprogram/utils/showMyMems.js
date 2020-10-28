@@ -12,6 +12,7 @@ export default function showMyMems() {
     member.name = students[myMem.sid].name;
     member.pic = students[myMem.sid].dress[myMem.didNow].pic;
     member.picB = borders[myMem.bid].picB;
+    member.inTeam = myMem.inTeam;
     showMembers.push(member);
   }
   return showMembers;

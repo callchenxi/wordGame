@@ -8,10 +8,10 @@ var json = [
     props: {
       hp: 1000,
       hpRate: 100,
-      atk: 100,
-      atkRate: 10,
-      def: 80,
-      defRate: 5,
+      atk: 140,
+      atkRate: 14,
+      def: 20,
+      defRate: 4,
     },
     dress: [
       {
@@ -29,8 +29,8 @@ var json = [
       hpRate: 100,
       atk: 100,
       atkRate: 10,
-      def: 80,
-      defRate: 5,
+      def: 60,
+      defRate: 6,
     },
     dress: [
       {
@@ -49,7 +49,7 @@ var json = [
       atk: 100,
       atkRate: 10,
       def: 80,
-      defRate: 5,
+      defRate: 6,
     },
     dress: [
       {
@@ -68,7 +68,7 @@ var json = [
       atk: 100,
       atkRate: 10,
       def: 80,
-      defRate: 5,
+      defRate: 6,
     },
     dress: [
       {
@@ -85,9 +85,9 @@ var json = [
       hp: 1000,
       hpRate: 100,
       atk: 100,
-      atkRate: 10,
-      def: 80,
-      defRate: 5,
+      atkRate: 12,
+      def: 50,
+      defRate: 4,
     },
     dress: [
       {
@@ -106,7 +106,7 @@ var json = [
       atk: 100,
       atkRate: 10,
       def: 80,
-      defRate: 5,
+      defRate: 6,
     },
     dress: [
       {
@@ -123,9 +123,9 @@ var json = [
       hp: 1000,
       hpRate: 100,
       atk: 100,
-      atkRate: 10,
+      atkRate: 4,
       def: 80,
-      defRate: 5,
+      defRate: 10,
     },
     dress: [
       {
@@ -144,7 +144,7 @@ var json = [
       atk: 100,
       atkRate: 10,
       def: 80,
-      defRate: 5,
+      defRate: 6,
     },
     dress: [
       {
@@ -163,7 +163,7 @@ var json = [
       atk: 100,
       atkRate: 10,
       def: 80,
-      defRate: 5,
+      defRate: 2,
     },
     dress: [
       {
@@ -182,7 +182,7 @@ var json = [
       atk: 100,
       atkRate: 10,
       def: 80,
-      defRate: 5,
+      defRate: 8,
     },
     dress: [
       {
@@ -201,7 +201,7 @@ var json = [
       atk: 100,
       atkRate: 10,
       def: 80,
-      defRate: 5,
+      defRate: 8,
     },
     dress: [
       {
@@ -220,7 +220,7 @@ var json = [
       atk: 100,
       atkRate: 10,
       def: 80,
-      defRate: 5,
+      defRate: 8,
     },
     dress: [
       {
@@ -239,7 +239,7 @@ var json = [
       atk: 100,
       atkRate: 10,
       def: 80,
-      defRate: 5,
+      defRate: 8,
     },
     dress: [
       {

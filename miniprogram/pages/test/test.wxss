@@ -23,3 +23,16 @@
   top: 0;
   z-index: 9;
 }
+/* --------- */
+swiper {
+  background-color: coral;
+  width: 120rpx;  
+  height: 320rpx;
+}
+.reward-img {
+  width: 100rpx;
+  height: 100rpx;
+  padding: 10rpx;
+  /* outline: 1px solid black; */
+  margin: 0 auto;
+}

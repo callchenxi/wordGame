@@ -1,7 +1,11 @@
 /* miniprogram/pages/lineup/lineup.wxss */
-.team-list{
+.team-box {
+  position: relative;
+}
+.team-list {
   display: flex;
-  width: 720rpx;
+  width: 730rpx;
+  height: 200rpx;
   margin: 0 auto;
 }
 .team-box .team {
@@ -9,9 +13,12 @@
   background-color: goldenrod;
   text-align: center;
   padding-bottom: 4rpx;
+  width: 145rpx;
+  height: 200rpx;
 }
 .team-box .team-pic {
   width: 140rpx;
+  height: 200rpx;
   padding: 0 2rpx;
 }
 .pic-border {
@@ -19,28 +26,34 @@
   left: 0; 
   z-index: 99;  
 }
+.chk-ani {
+  animation-name: checked;
+  animation-duration: .2s;
+  animation-timing-function: ease-out;
+} 
+@keyframes checked {
+  from{
+    transform: scale(1.2);
+  }
+  to{
+    transform: scale(1);
+  }
+}
 
-.stu-box {
-  position: relative;
-  height: 400rpx;
-  overflow: hidden;
-}
-.stu-box .stu-list {
+.props-box .props {
   display: flex;
-  flex-wrap: wrap;
-  width: 720rpx;
-  margin: 0 auto;
+  justify-content: space-evenly;
+  font-weight: 700;
 }
-.stu-list .stu {
-  position: relative;
+
+.props .hp-txt {
+  color: green;
 }
-.stu-list .stu-pic {
-  width: 110rpx; 
-  padding: 0 4rpx;
+
+.props .atk-txt {
+  color: red;
 }
-.backup {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 9;
+
+.props .def-txt {
+  color: blue;
 }

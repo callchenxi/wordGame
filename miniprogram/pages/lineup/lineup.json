@@ -1,4 +1,5 @@
 {
-  "usingComponents": {},
-  "disableScroll": true
+  "usingComponents": {
+    "w-show-my-members" : "../../components/w-show-my-members/w-show-my-members"
+  }
 }

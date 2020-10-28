@@ -1,45 +1,25 @@
 <!--miniprogram/pages/lineup/lineup.wxml-->
-<view class="root-box">
-  <view class="head"></view>
-  <view class="team-box">
+<view class="team-box">
     <view>队伍配置:</view>
     <view class="team-list">
-        <view wx:for="{{team}}" wx:key="sid" class="team" data-index="{{index}}"
-          bind:touchmove="handleExchange" bind:touchend="handleExchangeEnd">
-          <view>
-            <image src="{{item.picB}}" class="team-pic pic-border" mode="widthFix"></image>        
-            <image src="{{item.pic}}" class="team-pic" mode="widthFix"></image>
-          </view>
-          <view class="backup" style="{{currentIndex == index ? exchangeStyle : ''}}">
-            <image src="{{item.picB}}" class="team-pic pic-border" mode="widthFix"></image>  
-            <image src="{{item.pic}}" class="team-pic" mode="widthFix"></image>
-          </view>
-          <view>{{index == 0 ? '队长' : '队员'}}</view>  
-        </view>
-    </view>
-    <view class="team-props">
-    队伍属性
-    </view>
-  </view>
-  <view class="body-blank"></view>
-  <view class="stu-box">
-    <view>学员一览:</view>
-    <view class="stu-list">
-      <view wx:for="{{students}}" wx:key="sid" class="stu" data-index="{{index}}"
-            bind:touchmove="handleMove" bind:touchend="handleMoveEnd">
+      <view wx:for="{{showTeam}}" wx:key="sid" class="team chk-ani" data-index="{{index}}">
         <view>
-          <image src="{{item.picB}}" class="stu-pic pic-border" mode="widthFix"></image>  
-          <image src="{{item.pic}}" class="stu-pic" mode="widthFix"></image>
-        </view>
-        <view class="backup" style="{{currentIndex == index ? moveStyle : ''}}">
-          <image src="{{item.picB}}" class="stu-pic pic-border" mode="widthFix"></image>  
-          <image src="{{item.pic}}" class="stu-pic" mode="widthFix" ></image>
-        </view>
+          <image src="{{item.picB}}" class="team-pic pic-border" mode="widthFix"></image>        
+          <image src="{{item.pic}}" class="team-pic" mode="widthFix"></image>
+        </view>        
+      </view>
+      <view wx:for="{{5 - showTeam.length}}" wx:key="sid" class="team">   
+        <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1199103174,3548828166&fm=26&gp=0.jpg" 
+                class="team-pic" mode="aspectFill"></image>
+      </view>      
+    </view>
+    <view class="props-box">
+      <view>队伍配置:</view>
+      <view class="props">
+        <text class="hp-txt">Hp: {{hpSum}}</text>        
+        <text class="atk-txt">攻击: {{atkSum}}</text>        
+        <text class="def-txt">防御: {{defSum}}</text>        
       </view>
     </view>
   </view>
-  <view class="foot"></view>
-</view>
-
-
-
+<w-show-my-members type="team" bind:reflash="handleReflash"></w-show-my-members>

@@ -1,0 +1,46 @@
+/* components/w-show-my-members/w-show-my-members.wxss */
+.pic-border {
+  position: absolute;
+  left: 8; 
+  z-index: 99;  
+}
+.stu-box {
+  height: 500rpx;
+}
+.stu-box .stu-scroll {  
+  height: 450rpx;
+}
+.stu-scroll .stu-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 720rpx;
+  margin: 30rpx auto;
+}
+.stu-list .stu {
+  position: relative;
+  padding: 8rpx;
+}
+.stu .stu-pic {
+  width: 120rpx; 
+  padding: 0 4rpx;
+}
+.stu .checked {
+  position: absolute;
+  right: -2rpx;
+  top: -2rpx;
+  z-index: 100;
+}
+/* 选中时动画 */
+.chk-ani {
+  animation-name: checked;
+  animation-duration: .2s;
+  animation-timing-function: ease-out;
+} 
+@keyframes checked {
+  from{
+    transform: scale(1.2);
+  }
+  to{
+    transform: scale(1);
+  }
+}

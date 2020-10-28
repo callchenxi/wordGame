@@ -1,0 +1,16 @@
+<!--components/w-show-my-members/w-show-my-members.wxml-->
+<view class="stu-box">
+  <view>学员一览:</view>
+  <scroll-view class="stu-scroll" scroll-y>
+    <view class="stu-list">
+      <view wx:for="{{showMyMembers}}" wx:key="sid" class="stu {{currentIndex == index ? 'chk-ani' : ''}}" 
+            data-index="{{index}}" bind:tap="handleCheck">
+        <view>
+          <image src="{{item.picB}}" class="stu-pic pic-border" mode="widthFix"></image>  
+          <image src="{{item.pic}}" class="stu-pic" mode="widthFix"></image>
+        </view>
+        <icon class="checked" type="success" size="30rpx" hidden="{{!item.inTeam}}"></icon>
+      </view>
+    </view>    
+  </scroll-view>
+</view>

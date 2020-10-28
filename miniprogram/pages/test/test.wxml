@@ -15,3 +15,21 @@
       </view>
     </view>
   </view>
+  <swiper autoplay="{{autoplay}}" circular="true" vertical previous-margin="100rpx" next-margin="100rpx"
+          interval="{{interval}}" duration="{{duration}}" easing-function="easeOutCubic">
+    <swiper-item>
+      <image src="../../images/coin.svg" class="reward-img"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/diamond.svg" class="reward-img"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/medal.svg" class="reward-img"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/treasure.svg" class="reward-img"></image>
+    </swiper-item>
+  </swiper>
+  <button bind:tap="handleStart">开始</button>
+  <button bind:tap="handleStop1">停止1</button>
+  <button bind:tap="handleStop2">停止2</button>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "w-wealth-box": "../../components/w-wealth-box/w-wealth-box",
+    "w-show-my-members": "../../components/w-show-my-members/w-show-my-members"
+  }
+}

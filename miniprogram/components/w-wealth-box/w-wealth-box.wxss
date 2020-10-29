@@ -2,25 +2,25 @@
 .wealth {
   position: fixed;
   display: flex;
-  width: 400rpx;
-  height: 44rpx;
-  line-height: 44rpx;
-  left: 10rpx;
+  width: 250rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  left: 6rpx;
   top: 4rpx;
-  padding: 0 10rpx;
+  padding-right: 6rpx;
   border: 2rpx solid palevioletred;
   border-radius: 44rpx;
-  /* text-align: center; */
   z-index: 99;
   align-items: center;
+  font-size: 26rpx;
 }
 .wealth .txt {
-  text-indent: 1ch;
-  flex-grow: 1;
-  /* outline: 1px solid black; */
+  /* text-indent: 1ch; */
+  text-align: right;
+  width: 100rpx;
 }
 .wealth .icon {
-  width: 40rpx;
-  height: 40rpx;
-  /* outline: 1px solid black; */
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 6rpx;
 }

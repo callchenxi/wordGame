@@ -14,16 +14,29 @@ Page({
     maskHid: true,
     nineShow: false,
     getSid: Array(),
-    cardsNine: Array(9),
+    cardsNine: Array(9),    
+    coin: -1,
+    diamond: -1,
   },
 
   // 单抽按钮
   handleOne() {
+    const COST = 150;
+    if(this.data.diamond < COST) {
+      wx.showToast({
+        title: '钻石不足',
+        icon: 'none',
+        duration: 700,
+        mask: true,
+      })
+      return;
+    }
     this.data.getSid = new Array();
     let str = 'opacity: 1;transform: scale(1.25); transition: opacity 0.6s, transform 1s';
     this.setData({
       maskHid: false,
       cardStyle: str,
+      diamond: this.data.diamond - COST,
     })
     setTimeout(async() => {
       // 单抽结果+动画
@@ -37,10 +50,21 @@ Page({
 
   // 九连按钮
   async handleNine() {    
+    const COST = 1200;
+    if(this.data.diamond < COST) {
+      wx.showToast({
+        title: '钻石不足',
+        icon: 'none',
+        duration: 700,
+        mask: true,
+      })
+      return;
+    }
     this.data.getSid = new Array();
     this.setData({
       maskHid: false,
       nineShow: true,
+      diamond: this.data.diamond - COST,
     })
     // 九连结果+动画
     await this.tapAllTurn()
@@ -48,10 +72,9 @@ Page({
       btnHid: false,
     })
   },
- 
+
   // 确定按钮
   handleConfirm() {
-    
     this.setData({
       cardSrc: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1199103174,3548828166&fm=26&gp=0.jpg',
       cardStyle: 'opacity: 0',
@@ -146,49 +169,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+    // 读取storage里面的货币数量
+    this.setData({
+      coin: wx.getStorageSync('coin') || 0,
+      diamond: wx.getStorageSync('diamond') || 0,
+    })
   },
 
   /**

@@ -1,0 +1,27 @@
+<!--pages/dorm/dorm.wxml-->
+<view class="root-box">
+  <w-wealth-box coin="{{coin}}" diamond="{{diamond}}"></w-wealth-box>
+  <view class="head"></view>
+  <view class="char-box">
+    <view class="pic-box">
+      <swiper indicator-dots="true" current="{{mem.didNow}}" circular="true" class="{{aniPlay ? 'dress-show' : ''}}">
+        <swiper-item wx:for="{{dress}}" wx:key="item">
+          <image src="{{item.pic}}" mode="scaleToFill"></image>
+        </swiper-item>
+      </swiper>
+      <button size="mini">换装</button>
+    </view>
+    <view class="props-box">
+      <view>{{expandMem.name}}</view>
+      <view>Lv.{{expandMem.level}}</view>
+      <view>Hp: {{expandMem.props.hp}}</view>
+      <view>攻击: {{expandMem.props.atk}}</view>
+      <view>防御: {{expandMem.props.def}}</view>
+      <button bind:tap="handleLevelUp">升级</button>
+      <button bind:tap="handleAwake">觉醒</button>
+    </view>
+  </view>
+  <view class="body-blank"></view>
+  <w-show-my-members type="grow" bind:reflash="handleReflash"></w-show-my-members>
+  <view class="foot"></view>
+</view>

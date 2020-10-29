@@ -53,8 +53,17 @@ var json = [
     },
     dress: [
       {
-      did: 0,
-      pic: 'https://patchwiki.biligame.com/images/sssj/e/e6/5inlmygugxm5t6j8x8sb6109rcdt9cg.png',
+        did: 0,
+        pic: 'https://patchwiki.biligame.com/images/sssj/e/e6/5inlmygugxm5t6j8x8sb6109rcdt9cg.png',
+      },{
+        did: 1,
+        pic: 'https://patchwiki.biligame.com/images/sssj/5/5c/njd8rkvw2f5u3pzootun9mllxhxjukf.png',
+      },{
+        did: 2,
+        pic: 'https://patchwiki.biligame.com/images/sssj/e/e2/0ktdv8mg937grqk61xtgpyhdbzf6xly.png',
+      },{
+        did: 3,
+        pic: 'https://patchwiki.biligame.com/images/sssj/b/b2/3ix7j6096mwvvcsn503qydg9jsfs3yj.png',
       }
     ],
     skill: [],
@@ -72,8 +81,8 @@ var json = [
     },
     dress: [
       {
-      did: 0,
-      pic: 'https://patchwiki.biligame.com/images/sssj/9/9f/6luzyxgjl1uwjmfngaxki7ke4gbdiqc.png',
+        did: 0,
+        pic: 'https://patchwiki.biligame.com/images/sssj/9/9f/6luzyxgjl1uwjmfngaxki7ke4gbdiqc.png',
       }
     ],
     skill: [],

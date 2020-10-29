@@ -9,7 +9,8 @@
     <view class="buildings">
       <view class="entrance study" bind:tap="handleToStudy">教室</view>
       <view class="entrance exam" bind:tap="handleToExam">自习室</view>
-      <view class="entrance team" bind:tap="handleToTeam">宿舍</view>
+      <view class="entrance team" bind:tap="handleToTeam">编队</view>
+      <view class="entrance dorm" bind:tap="handleToDorm">宿舍</view>
       <view class="entrance recruit" bind:tap="handleToRecruit">社团招新</view>
       <navigator url="../battle/battle" open-type="redirect" class="entrance battle" >战斗</navigator>
     </view>

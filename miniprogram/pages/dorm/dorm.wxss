@@ -1,0 +1,41 @@
+/* pages/dorm/dorm.wxss */
+
+.char-box {
+  display: flex;
+  height: 700rpx
+}
+.char-box .pic-box {
+  position: relative;
+  width: 450rpx;
+}
+.pic-box swiper {
+  position: relative;
+  width: 450rpx;
+  height: 600rpx;
+  background-color: pink;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pic-box swiper image {
+  width: 450rpx;
+  height: 600rpx;
+}
+.dress-show{
+  animation-name: show;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes show {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.pic-box button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

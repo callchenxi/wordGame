@@ -30,9 +30,13 @@
   left: 150rpx;
   top: 450rpx;
 }
-.buildings .team {
+.buildings .dorm {
   left: 130rpx;
   top: 750rpx;
+}
+.buildings .team {
+  right: 100rpx;
+  top: 440rpx;
 }
 .buildings .battle {
   right: 150rpx;

@@ -57,8 +57,8 @@
           "query": ""
         },
         {
-          "name": "lineup",
-          "pathName": "pages/lineup/lineup",
+          "name": "dorm",
+          "pathName": "pages/dorm/dorm",
           "query": "",
           "scene": null
         },

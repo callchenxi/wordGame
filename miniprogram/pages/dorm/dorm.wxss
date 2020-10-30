@@ -1,24 +1,31 @@
 /* pages/dorm/dorm.wxss */
-
+.title {
+  height: 50rpx;
+}
 .char-box {
   display: flex;
-  height: 700rpx
+  height: 650rpx
 }
 .char-box .pic-box {
   position: relative;
   width: 450rpx;
+  padding: 0 10rpx;
 }
 .pic-box swiper {
-  position: relative;
-  width: 450rpx;
-  height: 600rpx;
+  width: 430rpx;
+  height: 574rpx;
   background-color: pink;
-  top: 50%;
-  transform: translateY(-50%);
 }
 .pic-box swiper image {
-  width: 450rpx;
-  height: 600rpx;
+  width: 430rpx;
+  height: 574rpx;
+}
+.pic-box swiper .border {
+  position: absolute;
+  width: 430rpx;
+  height: 574rpx;
+  left: 0;
+  top: 0;
 }
 .dress-show{
   animation-name: show;
@@ -33,9 +40,28 @@
     opacity: 1;
   }
 }
-.pic-box button {
+.pic-box .btn {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+.props-box .icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+.btn-box {
+  font-size: 30rpx;
+  text-align: center;
+}
+.btn-box .btn {
+  width: 240rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  margin: 0 auto;
+  padding: 0;
+}
+.btn-box .icon-s {
+  width: 30rpx;
+  height: 30rpx;
 }

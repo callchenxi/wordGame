@@ -2,26 +2,43 @@
 <view class="root-box">
   <w-wealth-box coin="{{coin}}" diamond="{{diamond}}"></w-wealth-box>
   <view class="head"></view>
+  <view class="title"></view>
   <view class="char-box">
     <view class="pic-box">
       <swiper indicator-dots="true" current="{{mem.didNow}}" circular="true" class="{{aniPlay ? 'dress-show' : ''}}">
         <swiper-item wx:for="{{dress}}" wx:key="item">
-          <image src="{{item.pic}}" mode="scaleToFill"></image>
-        </swiper-item>
+          <image src="{{item.pic}}" mode="scaleToFill" />     
+          <image src="{{expandMem.picB}}" mode="scaleToFill" class="border" />
+        </swiper-item> 
       </swiper>
-      <button size="mini">换装</button>
+      <button size="mini" class="btn">换装</button>
     </view>
     <view class="props-box">
       <view>{{expandMem.name}}</view>
-      <view>Lv.{{expandMem.level}}</view>
+      <view>Lv.{{expandMem.level}} / {{expandMem.maxLv}}</view>
       <view>Hp: {{expandMem.props.hp}}</view>
       <view>攻击: {{expandMem.props.atk}}</view>
       <view>防御: {{expandMem.props.def}}</view>
-      <button bind:tap="handleLevelUp">升级</button>
-      <button bind:tap="handleAwake">觉醒</button>
+      <view>
+        <image src="../../images/fragment.svg" class="icon"/>
+        : {{expandMem.num}}
+      </view>
+      <view class="btn-box">
+        <block wx:if="{{expandMem.level < expandMem.maxLv}}">
+          <button bind:tap="handleLevelUp" class="btn" >升级</button>
+          <image src="../../images/coin.svg" class="icon-s"/>{{needCoin}}
+        </block>
+        <block wx:else>
+          <block wx:if="{{mem.bid < 10}}">
+            <button bind:tap="handleAwake" class="btn">觉醒</button>
+            <image src="../../images/coin.svg" class="icon-s"/>{{needCoin}}
+            <image src="../../images/fragment.svg" class="icon-s"/>{{expandMem.needFrag}}
+          </block>
+        </block>
+      </view>
     </view>
   </view>
   <view class="body-blank"></view>
-  <w-show-my-members type="grow" bind:reflash="handleReflash"></w-show-my-members>
+  <w-show-my-members type="grow" bind:reflash="handleReflash" class="cpn-members"></w-show-my-members>
   <view class="foot"></view>
 </view>

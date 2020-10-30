@@ -90,11 +90,10 @@ Component({
   lifetimes: {
     // 在组件实例进入页面节点树时执行
     attached() {
-      let showMyMembers = showMyMems();
       this.data._myMembers = wx.getStorageSync('myMembers') || new Array();
       this.data._team = wx.getStorageSync('team') || new Array();
       this.setData({
-        showMyMembers,
+        showMyMembers: showMyMems()
       })  
     }
   }

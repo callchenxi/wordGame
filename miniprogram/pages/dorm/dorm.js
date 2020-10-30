@@ -1,6 +1,8 @@
 // pages/dorm/dorm.js
 import expandMember from '../../utils/expandMember.js';
 import setMyMem from '../../utils/setMyMem.js';
+import calcNeedCoin from '../../utils/calcNeedCoin.js';
+import showMyMems from '../../utils/showMyMems';
 Page({
 
   /**
@@ -14,6 +16,7 @@ Page({
     expandMem: Object(),
     dress: Array(),
     aniPlay: false,
+    needCoin: 0,
   },
 
   handleReflash(event) {    
@@ -29,12 +32,61 @@ Page({
   },
 
   handleLevelUp() {
+    if(this.data.coin < this.data.needCoin) {
+      wx.showToast({
+        title: '金币不足',
+        duration: 700,
+        icon: 'none',
+        mask: true
+      })
+      return;
+    }
     this.setData({
-      ['mem.level']: this.data.mem.level + 1
+      ['mem.level']: this.data.mem.level + 1,
+      coin: this.data.coin - this.data.needCoin
     })
     this.showProps(this.data.mem);
-    console.log(this.data.mem);
     setMyMem(this.data.mem);
+  },
+
+  handleAwake() {
+    // 判断金币及同名卡是否足够
+    if(this.data.coin < this.data.needCoin) {
+      wx.showToast({
+        title: '金币不足',
+        duration: 700,
+        icon: 'none',
+        mask: true
+      })
+      return;
+    } else if (this.data.expandMem.num < this.data.expandMem.needFrag) {
+      wx.showToast({
+        title: '同名卡不足',
+        duration: 700,
+        icon: 'none',
+        mask: true
+      })
+      return;
+    }
+
+    this.setData({
+      ['mem.level']: this.data.mem.level + 1,
+      ['mem.bid']: this.data.mem.bid + 1,
+      ['mem.num']: this.data.mem.num - this.data.expandMem.needFrag,
+      coin: this.data.coin - this.data.needCoin
+    })
+
+    this.data.mem = this.getNewDress(this.data.mem)
+    this.showProps(this.data.mem);
+    this.showDress(this.data.mem);
+    setMyMem(this.data.mem);
+    // 更新组件数据(因为觉醒后边框及默认皮肤发生变化)
+    this.selectComponent('.cpn-members').setData({
+      showMyMembers: showMyMems()
+    })
+    this.setData({
+      mem: this.data.mem
+    })
   },
 
   // 显示拥有该卡片的所有皮肤
@@ -57,12 +109,33 @@ Page({
     })
   },
 
+  //  显示该卡片的相关属性
   showProps(mem) {
     this.setData({
-      expandMem: expandMember(mem)
-    })    
+      expandMem: expandMember(mem),
+      needCoin: calcNeedCoin(mem.level)
+    })
+  },
+
+  //  判断觉醒后是否获得新皮肤
+  getNewDress(mem) {
+    let borders = require('../../data/borders.js').bordersJson;
+    if(borders[mem.bid].newDid != -1) {
+      for(let id of mem.did) {
+        if(id == borders[mem.bid].newDid) {
+          return mem;
+        }
+      }
+      // 觉醒成功,获得新皮肤
+      mem.did.push(borders[mem.bid].newDid);
+      mem.didNow = borders[mem.bid].newDid;
+    } else {
+      // 觉醒成功, 没有新皮肤
+    }
+    return mem;
   },
   
+
 
   /**
    * 生命周期函数--监听页面加载

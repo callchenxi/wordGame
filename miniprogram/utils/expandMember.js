@@ -6,6 +6,8 @@ export default function expandMember(member) {
   expandMember.name = students[member.sid].name;
   expandMember.pic = students[member.sid].dress[member.didNow].pic;
   expandMember.picB = borders[member.bid].picB;
+  expandMember.maxLv = borders[member.bid].maxLv;
+  expandMember.needFrag = borders[member.bid].needFrag;
   expandMember.props = new Object()
   expandMember.props.hp = students[member.sid].props.hp + students[member.sid].props.hpRate * (member.level - 1); 
   expandMember.props.atk = students[member.sid].props.atk + students[member.sid].props.atkRate * (member.level - 1); 

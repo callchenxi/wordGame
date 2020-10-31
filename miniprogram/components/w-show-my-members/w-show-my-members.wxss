@@ -21,7 +21,8 @@
   padding: 8rpx;
 }
 .stu .stu-pic {
-  width: 120rpx; 
+  width: 120rpx;
+  height: 160rpx;
   padding: 0 4rpx;
 }
 .stu .checked {

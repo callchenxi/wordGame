@@ -17,6 +17,9 @@ Page({
     dress: Array(),
     aniPlay: false,
     needCoin: 0,
+    isShow: false,
+    oldCard: Object(),
+    mewCard: Object(),
   },
 
   handleReflash(event) {    
@@ -68,6 +71,8 @@ Page({
       })
       return;
     }
+    // 保存就卡数据
+    let oldCard = Object.assign({}, this.data.mem);
 
     this.setData({
       ['mem.level']: this.data.mem.level + 1,
@@ -79,13 +84,29 @@ Page({
     this.data.mem = this.getNewDress(this.data.mem)
     this.showProps(this.data.mem);
     this.showDress(this.data.mem);
+    
+    // 保存新卡数据
+    let newCard = Object.assign({}, this.data.mem);
+    this.setData({
+      oldCard,
+      newCard, 
+      isShow: true,
+    })
+    this.selectComponent('.awake-ani').show()
+    
     setMyMem(this.data.mem);
     // 更新组件数据(因为觉醒后边框及默认皮肤发生变化)
     this.selectComponent('.cpn-members').setData({
       showMyMembers: showMyMems()
     })
     this.setData({
-      mem: this.data.mem
+      mem: this.data.mem,     
+    })
+  },
+
+  handleDressup() {
+    this.setData({
+      isShow: true,
     })
   },
 

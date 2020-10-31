@@ -6,8 +6,8 @@
       <view wx:for="{{showMyMembers}}" wx:key="sid" class="stu {{currentIndex == index ? 'chk-ani' : ''}}" 
             data-index="{{index}}" bind:tap="handleCheck">
         <view>
-          <image src="{{item.picB}}" class="stu-pic pic-border" mode="widthFix"></image>  
-          <image src="{{item.pic}}" class="stu-pic" mode="widthFix"></image>
+          <image src="{{item.picB}}" class="stu-pic pic-border" mode="scaleToFill"></image>  
+          <image src="{{item.pic}}" class="stu-pic" mode="scaleToFill"></image>
         </view>
         <icon class="checked" type="success" size="30rpx" hidden="{{!item.inTeam}}"></icon>
       </view>

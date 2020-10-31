@@ -1,6 +1,7 @@
 <!--pages/dorm/dorm.wxml-->
 <view class="root-box">
   <w-wealth-box coin="{{coin}}" diamond="{{diamond}}"></w-wealth-box>
+  <w-awake-animation isShow="{{isShow}}" oldCard="{{oldCard}}" newCard="{{newCard}}" class="awake-ani"></w-awake-animation>
   <view class="head"></view>
   <view class="title"></view>
   <view class="char-box">
@@ -11,7 +12,7 @@
           <image src="{{expandMem.picB}}" mode="scaleToFill" class="border" />
         </swiper-item> 
       </swiper>
-      <button size="mini" class="btn">换装</button>
+      <button size="mini" class="btn" bind:tap="handleDressup">换装</button>
     </view>
     <view class="props-box">
       <view>{{expandMem.name}}</view>

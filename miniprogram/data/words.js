@@ -271,6 +271,246 @@ var json = [
         en: 'The eldest son will inherit the title',
         ch: '长子将继承爵位',
       } ]
+  },{
+    wid: 16,
+    spelling: 'museum',
+    phoneticSym: '[mjuˈziːəm]',
+    translations: ['[名] 博物馆'],
+    examples: [
+      {
+        en: 'visit a museum',
+        ch: '参观博物馆',
+      }, {
+        en: 'There are some butterfly specimens in the museum',
+        ch: '那家博物馆里有一些蝴蝶标本',
+      }, {
+        en: 'science museum',
+        ch: '科学博物馆',
+      } ]
+  },{
+    wid: 17,
+    spelling: 'spin',
+    phoneticSym: '[spɪn]',
+    translations: ['[动] 纺(纱); 旋转; 疾驰', '[名] 旋转'],
+    examples: [
+      {
+        en: 'to spin at full speed',
+        ch: '全速旋转',
+      }, {
+        en: 'Mother used spin her own yarn',
+        ch: '母亲过去一直是自己纺纱的',
+      }, {
+        en: 'Suddenly, the plane went into a spin',
+        ch: '飞机突然旋转起来',
+      } ]
+  },{
+    wid: 18,
+    spelling: 'sum',
+    phoneticSym: '[sʌm]',
+    translations: ['[名] 总数; 算术; 金额'],
+    examples: [
+      {
+        en: 'Please sum up what you said just now',
+        ch: '请把你刚才说的总结一下',
+      }, {
+        en: 'It is a considerable sum of money',
+        ch: '那是一笔数量可观的钱',
+      }, {
+        en: 'The sum of 5 and 3 is 8',
+        ch: '五加三的总和是八',
+      } ]
+  },{
+    wid: 19,
+    spelling: 'lower',
+    phoneticSym: '[ˈləʊə(r)]',
+    translations: ['[动] 降低; 减少', '[形] 较低的; 下游的', '[形] 更低的'],
+    examples: [
+      {
+        en: 'Please lower your voice',
+        ch: '请放低声音',
+      }, {
+        en: 'lower the price',
+        ch: '降低价格',
+      }, {
+        en: 'The lower valley of the river is often flooded',
+        ch: '该河的下游区域经常遭遇洪水',
+      } ]
+  },{
+    wid: 20,
+    spelling: 'devote',
+    phoneticSym: '[dɪˈvəʊt]',
+    translations: ['[动] 投入; 献身'],
+    examples: [
+      {
+        en: 'I devote myself to helping the poor',
+        ch: '我致力于救助穷人',
+      }, {
+        en: 'After he has retired, he will devote himself to gardening',
+        ch: '退休后, 他将要致力于园艺',
+      }, {
+        en: 'Please devote more time to your work',
+        ch: '请把更多的时间用于工作',
+      } ]
+  },{
+    wid: 21,
+    spelling: 'board',
+    phoneticSym: '[bɔːd]',
+    translations: ['[动] 上船(或火车, 飞机等)', '[名] 板; 董事会'],
+    examples: [
+      {
+        en: 'It\'s time to get on board',
+        ch: '登机时间到了',
+      }, {
+        en: 'chairman of the board',
+        ch: '董事会主席',
+      }, {
+        en: 'He wrote a few more notes on the black board',
+        ch: '他在黑板上又写了几条注释',
+      } ]
+  },{
+    wid: 22,
+    spelling: 'loop',
+    phoneticSym: '[luːp]',
+    translations: ['[动] 使...成环', '[名] 圈; 环'],
+    examples: [
+      {
+        en: 'She made a loop in the string',
+        ch: '她用绳子打了个圈',
+      }, {
+        en: 'She put a loop of rope around the cow\'s neck',
+        ch: '她把一圈绳子套到奶牛的脖子上',
+      }, {
+        en: 'twist the wire into a loop',
+        ch: '把电线弯成一个圈',
+      } ]
+  },{
+    wid: 23,
+    spelling: 'abstract',
+    phoneticSym: '[ˈæbstrækt]',
+    translations: ['[动] 提取; 抽取; 作...的摘要', '[名] 摘要; 概要; 抽象派艺术品', '[形]抽象的; 非具体的; 深奥的'],
+    examples: [
+      {
+        en: 'Please abstract this scientific article',
+        ch: '请写出这篇科学论文的摘要',
+      }, {
+        en: 'Workers abstract metal from ore',
+        ch: '工人从矿砂中提炼金属',
+      }, {
+        en: 'His plans were too abstract to be put into operation',
+        ch: '他的计划太不具体, 无法付诸实施',
+      } ]
+  },{
+    wid: 24,
+    spelling: 'fortnight',
+    phoneticSym: '[ˈfɔːtnaɪt]',
+    translations: ['[名] 两星期'],
+    examples: [
+      {
+        en: 'The patient lived out another fortnight',
+        ch: '病人又活了两星期',
+      }, {
+        en: 'I see them about once a fortnight',
+        ch: '我大约两星期见他们一次',
+      }, {
+        en: 'A fortnight has fourteen days',
+        ch: '两周有十四天',
+      } ]
+  },{
+    wid: 25,
+    spelling: 'graph',
+    phoneticSym: '[ɡræf]',
+    translations: ['[名] 图标; 曲线图'],
+    examples: [
+      {
+        en: 'The graph shows a boom in the birth rate',
+        ch: '图表显示出生率的暴增',
+      }, {
+        en: 'Our research results are displayed in the form of a graph',
+        ch: '我们的研究结果已用图标列出',
+      }, {
+        en: 'Plot the temperature curve on the graph',
+        ch: '在图标上绘出温度曲线',
+      } ]
+  },{
+    wid: 26,
+    spelling: 'missing',
+    phoneticSym: '[ˈmɪsɪŋ]',
+    translations: ['[形] 失踪的; 失去的', '[动] 想念; 错失;'],
+    examples: [
+      {
+        en: 'I can\'t help missing your smile',
+        ch: '我不由自主地想念你的笑容',
+      }, {
+        en: 'He was mad at missing his train',
+        ch: '他为错过火车而恼火',
+      }, {
+        en: 'Police are searching the woods for the missing children',
+        ch: '警察搜遍树林以寻找失踪的孩子',
+      } ]
+  },{
+    wid: 27,
+    spelling: 'publicity',
+    phoneticSym: '[pʌbˈlɪsətis]',
+    translations: ['[名] 宣传; 公开; 曝光度'],
+    examples: [
+      {
+        en: 'give publicity to the face',
+        ch: '把事实公诸于众',
+      }, {
+        en: 'newspaper publicity',
+        ch: '新闻宣传',
+      }, {
+        en: 'publicity of prohibition of opium',
+        ch: '禁毒宣传',
+      } ]
+  },{
+    wid: 28,
+    spelling: 'chemical',
+    phoneticSym: '[ˈkemɪkl]',
+    translations: ['[名] 化学品', '[形] 化学的'],
+    examples: [
+      {
+        en: 'chemical weapon',
+        ch: '化学武器',
+      }, {
+        en: 'chemical apparatus',
+        ch: '化学仪器',
+      }, {
+        en: 'My interests are chemical experiments',
+        ch: '我对化学实验很有兴趣',
+      } ]
+  },{
+    wid: 29,
+    spelling: 'court',
+    phoneticSym: '[kɔːt]',
+    translations: ['[名] 法院; 球场; 宫廷', '[动] 求爱; 献殷勤; 招致'],
+    examples: [
+      {
+        en: 'to court controversy',
+        ch: '招致争议',
+      }, {
+        en: 'tennis court',
+        ch: '网球场',
+      }, {
+        en: 'to court favor from the visiting nobility',
+        ch: '求宠于来访的贵族',
+      } ]
+  },{
+    wid: 30,
+    spelling: 'stroke',
+    phoneticSym: '[strəʊk]',
+    translations: ['[名] 一击; 打击; 中风; 轻抚; 划水动作; 钟鸣', '[动] 轻抚'],
+    examples: [
+      {
+        en: 'She gave the cat a stroke',
+        ch: '她打了那只猫一下',
+      }, {
+        en: 'She swam with a graceless stroke',
+        ch: '她的泳姿很难看',
+      }, {
+        en: 'a stroke of lighting',
+        ch: '一道闪电',
+      } ]
   },
 ]
 

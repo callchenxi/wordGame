@@ -511,6 +511,166 @@ var json = [
         en: 'a stroke of lighting',
         ch: '一道闪电',
       } ]
+  },{
+    wid: 31,
+    spelling: 'selfish',
+    phoneticSym: '[ˈselfɪʃ]',
+    translations: ['[形] 自私的'],
+    examples: [
+      {
+        en: 'A selfish person always thinks about himself',
+        ch: '一个自私的人总是想着自己',
+      }, {
+        en: 'selfish motives',
+        ch: '自私的动机',
+      }, {
+        en: 'He\'s too selfish to think of lending me his car',
+        ch: '他是一个自私的人, 不想把车子借给我',
+      } ]
+  },{
+    wid: 32,
+    spelling: 'maintain',
+    phoneticSym: '[meɪnˈteɪn]',
+    translations: ['[动] 维护; 保持; 供养'],
+    examples: [
+      {
+        en: 'The machine is very simple to maintain',
+        ch: '这机器维护起来很简便',
+      }, {
+        en: 'maintain good relations',
+        ch: '保持良好的关系',
+      }, {
+        en: 'enough food to maintain life',
+        ch: '足够食物去维持声明',
+      } ]
+  },{
+    wid: 33,
+    spelling: 'honey',
+    phoneticSym: '[ˈhʌni]',
+    translations: ['[名] 蜂蜜; 甜蜜; 宝贝'],
+    examples: [
+      {
+        en: 'Love is a mixture of honey and bitterness',
+        ch: '爱情混杂这甜蜜和苦涩',
+      }, {
+        en: 'Honey, be a good boy',
+        ch: '宝贝儿, 乖点儿',
+      }, {
+        en: 'We can use honey as a substitute for sugar',
+        ch: '我们可以用蜂蜜作为糖的替代品',
+      } ]
+  },{
+    wid: 34,
+    spelling: 'automobile',
+    phoneticSym: '[ˈɔːtəməbiːl]',
+    translations: ['[名] 汽车'],
+    examples: [
+      {
+        en: 'He became disabled in an automobile accident',
+        ch: '他在一次车祸中成了残疾人',
+      }, {
+        en: 'Nowadays, our country encourages the pollution-free automobile',
+        ch: '现在, 我们国家提倡无污染汽车',
+      }, {
+        en: 'automobile industry',
+        ch: '汽车工业',
+      } ]
+  },{
+    wid: 35,
+    spelling: 'living room',
+    phoneticSym: '[ˈlɪvɪŋ ruːm]',
+    translations: ['[短语] 客厅; 起居室'],
+    examples: [
+      {
+        en: 'You can see a living room',
+        ch: '你能看见一间客厅',
+      }, {
+        en: 'How big is your living room',
+        ch: '你的起居室有多大?',
+      }, {
+        en: 'I was sitting in the living room',
+        ch: '我坐在客厅里',
+      } ]
+  },{
+    wid: 36,
+    spelling: 'leading',
+    phoneticSym: '[ˈliːdɪŋ]',
+    translations: ['[形] 处于领导地位的; 一流的; 主要的', '[动] 带领; 领导'],
+    examples: [
+      {
+        en: 'He plays a leading role in the revolution',
+        ch: '他在这场革命中起领导地位',
+      }, {
+        en: 'leading roles',
+        ch: '主要角色',
+      }, {
+        en: 'You\'re leading him to the wrong way',
+        ch: '你在把他引向歧途',
+      } ]
+  },{
+    wid: 37,
+    spelling: 'stir',
+    phoneticSym: '[stɜː]',
+    translations: ['[动] 搅拌; 搅动; 激起'],
+    examples: [
+      {
+        en: 'These stories stir her sympathy',
+        ch: '这些故事激起了她的同情心',
+      }, {
+        en: 'stir up hatred',
+        ch: '激起仇恨',
+      }, {
+        en: 'stir sugar into coffee',
+        ch: '把糖搅拌在咖啡里',
+      } ]
+  },{
+    wid: 38,
+    spelling: 'rid',
+    phoneticSym: '[rɪd]',
+    translations: ['[动] 摆脱; 除去', '[形] 摆脱了的'],
+    examples: [
+      {
+        en: 'It is not easy to rid oneself of a bad habit',
+        ch: '要除掉自己的坏习惯并不容易',
+      }, {
+        en: 'We must try every way to rid ourselves of these debts',
+        ch: '我们要想尽一切办法来摆脱这些债务',
+      }, {
+        en: 'rid the rats',
+        ch: '把老鼠除掉',
+      } ]
+  },{
+    wid: 39,
+    spelling: 'electric',
+    phoneticSym: '[ɪˈlektrɪk]',
+    translations: ['[形] 电的; 用电的'],
+    examples: [
+      {
+        en: 'He uses an electric razor for shaving',
+        ch: '他用一把电动刮脸刀刮脸',
+      }, {
+        en: 'He put the electric plug into the socket',
+        ch: '他把电源插头插入插座',
+      }, {
+        en: 'suffer from an electric shock',
+        ch: '遭到电击',
+      } ]
+  },{
+    wid: 40,
+    spelling: 'lung',
+    phoneticSym: '[lʌŋ]',
+    translations: ['[名] 肺'],
+    examples: [
+      {
+        en: 'A bullet pierced his right lung',
+        ch: '一颗子弹洞穿他的右肺',
+      }, {
+        en: 'Is there a link between smoking and lung cancer',
+        ch: '吸烟与肺癌之间有关系吗',
+      }, {
+        en: 'lung cancer',
+        ch: '肺癌',
+      } ]
   },
 ]
 

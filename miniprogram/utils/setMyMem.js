@@ -1,3 +1,4 @@
+// 更新Storage中的myMembers
 export default function setMyMem(member) {
   let members = wx.getStorageSync('myMembers');
   for(let i in members) {

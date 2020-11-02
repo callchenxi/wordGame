@@ -2,12 +2,12 @@
 <view class="mask" wx:if="{{isShow}}" bind:tap="handleHide">
   <view class="card-box {{isAni? 'shake-ani' : ''}}">
     <view class="old">
-      <image src="{{old.pic}}" class="pic"></image>
-      <image src="{{old.picB}}" class="pic border"></image>
+      <image src="{{oldCard.pic}}" class="pic"></image>
+      <image src="{{oldCard.picB}}" class="pic border"></image>
     </view>
     <view class="new  {{isAni? 'show-ani' : 'hide-ani'}}">
-      <image src="{{new.pic}}" class="pic"></image>
-      <image src="{{new.picB}}" class="pic border"></image>
+      <image src="{{newCard.pic}}" class="pic"></image>
+      <image src="{{newCard.picB}}" class="pic border"></image>
     </view>
   </view>
   <view class="title" hidden="{{!isEnd}}">觉醒完成</view>

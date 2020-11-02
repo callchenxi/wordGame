@@ -1,21 +1,32 @@
 <!--components/w-battle-scence/w-battle-scence.wxml-->
 <view class="battle-scence">
-  <view class="team us">
-    <view class="title">我方 HP: {{usHp}}</view>
-    <view class="pic-box" wx:for="{{us}}" wx:key="name">
-      <image src="{{item.picH}}" 
-           class="pic-h {{usAttack[index]}}" mode="widthFix"></image>
+  <view class="enemy">
+    <view class="hp-box">
+      <progress stroke-width="30rpx" border-radius="30rpx" active 
+                active-mode="forwards" activeColor="#EBEBEB" backgroundColor="#AE0000" 
+                class="hp-bar" percent="{{100 - enHp / enemy.hp * 100}}"></progress>
+      <text class="hp-txt">{{enHp}}/{{enemy.hp}}</text>  
+    </view>
+    <view class="pic-box {{enAttack}}">
+      <image src="{{enemy.pic}}" class="pic" mode="scaleToFill"></image>
     </view>
   </view>
-  <view class="team enemies">
-    <view class="title">敌方 HP: {{enHp}}</view>
-    <view class="pic-box" wx:for="{{enemies}}" wx:key="name">
-      <image src="{{item.picH}}" 
-           class="pic-h {{enAttack[index]}}" mode="widthFix"></image>
+  <view class="us">
+    <view class="team">
+      <view class="pic-box {{usAttack[index]}}" wx:for="{{us}}" wx:key="name">
+        <image src="{{item.pic}}" class="pic" mode="scaleToFill"></image>
+        <image src="{{item.picB}}" class="pic-b" mode="scaleToFill"></image>
+      </view>
+    </view>
+    <view class="hp-box">
+      <progress stroke-width="30rpx" border-radius="30rpx" active 
+                active-mode="forwards" activeColor="#EBEBEB" backgroundColor="#09BB07" 
+                class="hp-bar" percent="{{100 - usHp / usMaxHp * 100}}"></progress>
+      <text class="hp-txt">{{usHp}}/{{usMaxHp}}</text>  
     </view>
   </view>
 </view>
-<block wx:if="{{false}}">
+<block wx:if="{{true}}">
   <button bind:tap="handleFight">test</button>
 </block>
 

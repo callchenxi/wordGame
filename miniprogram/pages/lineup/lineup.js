@@ -1,4 +1,5 @@
 // miniprogram/pages/lineup/lineup.js
+import Member from '../../class/Member.js'
 import expandTeam from '../../utils/expandTeam.js';
 Page({
 
@@ -12,11 +13,29 @@ Page({
     defSum: 0,
   },
 
-  handleReflash() {  
+  handleReflash() {
     this.setData({
       showTeam: expandTeam()
     })
-    this.calcPropsAni()
+    this.calcPropsAni();
+  },
+
+  showTeam() {
+    let showTeam = new Array()
+    let team = wx.getStorageSync('team');
+    let myMembers = wx.getStorageSync('myMembers');
+    for(let teamMem of team) {
+      for(let mem of myMembers) {
+        if(teamMem.sid == mem.sid) {
+          let newMem = new Member(mem);
+          newMem.expandMember();
+          showTeam.push(newMem)
+        }
+      }
+    }
+    this.setData({
+      showTeam
+    })
   },
 
   calcPropsAni() {
@@ -100,11 +119,11 @@ Page({
     })
   },
 
-  onLoad(options) {    
+  onLoad(options) {
     this.setData({
       showTeam: expandTeam()
     })
-    this.calcProps()
+    this.calcProps();
   },
 
   /**

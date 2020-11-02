@@ -1,3 +1,3 @@
 <!--pages/test/test.wxml-->
-<w-awake-animation isShow="{{isShow}}" class="awake-ani"></w-awake-animation>
+<w-battle-scence us="{{us}}"></w-battle-scence>
 <button bind:tap="handleStart">开始</button>

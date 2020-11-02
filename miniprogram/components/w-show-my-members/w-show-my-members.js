@@ -1,5 +1,5 @@
 // components/w-show-my-members/w-show-my-members.js
-import showMyMems from '../../utils/showMyMems.js';
+import Member from '../../class/Member.js';
 Component({
   /**
    * 组件的属性列表
@@ -84,17 +84,26 @@ Component({
     showInGrow(e) {
       let i = e.currentTarget.dataset.index;
       return this.data._myMembers[i];
+    },
+
+    // 显示所有拥有的成员
+    displayMyMems() {
+      this.data._myMembers = wx.getStorageSync('myMembers') || new Array();
+      this.data._team = wx.getStorageSync('team') || new Array();
+      for(let i in this.data._myMembers) {
+        this.data.showMyMembers[i] = new Member(this.data._myMembers[i]);
+        this.data.showMyMembers[i].expandMember();
+      }
+      this.setData({
+        showMyMembers:  this.data.showMyMembers
+      })
     }
   },
 
   lifetimes: {
     // 在组件实例进入页面节点树时执行
     attached() {
-      this.data._myMembers = wx.getStorageSync('myMembers') || new Array();
-      this.data._team = wx.getStorageSync('team') || new Array();
-      this.setData({
-        showMyMembers: showMyMems()
-      })  
+      this.displayMyMems();
     }
   }
 })

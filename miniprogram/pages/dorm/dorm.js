@@ -1,8 +1,7 @@
 // pages/dorm/dorm.js
-import expandMember from '../../utils/expandMember.js';
 import setMyMem from '../../utils/setMyMem.js';
 import calcNeedCoin from '../../utils/calcNeedCoin.js';
-import showMyMems from '../../utils/showMyMems';
+import Member from '../../class/Member.js';
 Page({
 
   /**
@@ -72,7 +71,8 @@ Page({
       return;
     }
     // 保存就卡数据
-    let oldCard = Object.assign({}, this.data.mem);
+    let oldCard = new Member(this.data.mem);
+    oldCard.expandMember()
 
     this.setData({
       ['mem.level']: this.data.mem.level + 1,
@@ -86,7 +86,8 @@ Page({
     this.showDress(this.data.mem);
     
     // 保存新卡数据
-    let newCard = Object.assign({}, this.data.mem);
+    let newCard = new Member(this.data.mem);
+    newCard.expandMember()
     this.setData({
       oldCard,
       newCard, 
@@ -96,9 +97,7 @@ Page({
     
     setMyMem(this.data.mem);
     // 更新组件数据(因为觉醒后边框及默认皮肤发生变化)
-    this.selectComponent('.cpn-members').setData({
-      showMyMembers: showMyMems()
-    })
+    this.selectComponent('.cpn-members').displayMyMems();
     this.setData({
       mem: this.data.mem,     
     })
@@ -132,8 +131,10 @@ Page({
 
   //  显示该卡片的相关属性
   showProps(mem) {
+    this.data.expandMem = new Member(mem);
+    this.data.expandMem.expandMember();
     this.setData({
-      expandMem: expandMember(mem),
+      expandMem: this.data.expandMem,
       needCoin: calcNeedCoin(mem.level)
     })
   },

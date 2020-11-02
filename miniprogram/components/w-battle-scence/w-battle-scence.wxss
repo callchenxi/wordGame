@@ -1,33 +1,31 @@
 /* components/w-battle-scence/w-battle-scence.wxss */
 .battle-scence {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 60rpx;
-  background-color: green;
+  position: relative;
+  height: 780rpx;
 }
 .battle-scence .team {
-  width: 360rpx;
-  height: 700rpx;
+  display: flex;
+  justify-content: space-evenly;
+  width: 750rpx;
+  height: 200rpx;
 }
-.battle-scence .team .pic-box {
+.battle-scence .pic-box {  
   position: relative;
-  height: 120rpx;
-  margin-bottom: 10rpx;
-  overflow: hidden;
 }
-
 .battle-scence .us {
-  background-color: cornflowerblue;
-}
-.battle-scence .us .title {
-  text-align: left;
-  padding-left: 20rpx;
-}
-.battle-scence .us .pic-h {
   position: absolute;
-  width: 360rpx;
-  top: -50rpx;
-  left: -40rpx;
+  bottom: 0;
+}
+.battle-scence .us .pic {
+  width: 140rpx;
+  height: 200rpx;
+}
+.battle-scence .us .pic-b {
+  position: absolute;
+  width: 140rpx;
+  height: 200rpx;
+  left: 0;
+  top: 0;
 }
 /* 我方攻击动画 */
 .us .attack {
@@ -39,28 +37,46 @@
 } 
 @keyframes us-attack {
   from{
-    left: -40rpx;
+    bottom: 0rpx;
   }
   to{
-    left: 0;
+    bottom: 40rpx;
   }
 }
-
-.battle-scence .enemies {
-  background-color: brown;
+.battle-scence .hp-box {
+  margin: 10rpx 10rpx;
+  position: relative;
 }
-.battle-scence .enemies .title {
-  text-align: right;
-  padding-right: 20rpx;
+.hp-box .hp-bar {  
+  transform: rotate(180deg);
 }
-.battle-scence .enemies .pic-h {
+.hp-box .hp-txt {
   position: absolute;
-  width: 360rpx;
-  top: -50rpx;
-  right: -40rpx;
+  top: -6rpx;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 30rpx;
+}
+
+
+.battle-scence .enemy {
+  position: absolute;
+  top: 0;
+}
+.enemy .pic-box {
+  display: flex;
+  justify-content: space-around;
+  width: 750rpx;
+  height: 300rpx;
+}
+.enemy .pic {
+  width: 730rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
 }
 /* 敌方攻击动画 */
-.enemies .attack {
+.enemy .attack {
+  position: relative;
   animation-name: en-attack;
   animation-duration: .1s;
   animation-timing-function: linear;
@@ -69,9 +85,9 @@
 } 
 @keyframes en-attack {
   from{
-    right: -40rpx;
+    top: 0;
   }
   to{
-    right: 0;
+    top: 40rpx;
   }
 }

@@ -1,21 +1,20 @@
-import showMyMems from '../../utils/showMyMems.js';
-
 // pages/test/test.js
+import expandTeam from '../../utils/expandTeam.js';
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    isShow: false
+    us: Array(),
   },
 
   handleStart() {
-    this.setData({
-      isShow: true
-    })
-    let cpn = this.selectComponent('.awake-ani')
-    cpn.show();
+    let mem = {"sid":10,"level":21,"bid":1,"didNow":0,"did":[0],"num":3,"inTeam":false};
+    
+    var abc = new Member();
+    abc.createNewMem(6);
+    abc.expandMember();
+    console.log(abc);
     
   },
 
@@ -23,6 +22,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      us: expandTeam()
+    })
   },
 
   /**

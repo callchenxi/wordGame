@@ -1,6 +1,6 @@
 // pages/recruit/recruit.js
 import getRandomInt from "../../utils/getRandomInt.js";
-import createNewMem from "../../utils/createNewMem.js";
+import Member from "../../class/Member.js";
 
 Page({
 
@@ -145,7 +145,9 @@ Page({
     let myMembers = wx.getStorageSync('myMembers') || []
     for(let sid of res) {
       if(myMembers.length == 0) {
-        myMembers.push(createNewMem(sid));
+        let mem = new Member();
+        mem.createNewMem(sid);
+        myMembers.push(mem);
       } else {
         // 做个flag标记,判断是否已有该卡
         let flag = false;
@@ -157,7 +159,9 @@ Page({
           }
         }
         if(!flag) {
-          myMembers.push(createNewMem(sid));        
+          let mem = new Member();
+          mem.createNewMem(sid);
+          myMembers.push(mem);       
         }
       }
     }

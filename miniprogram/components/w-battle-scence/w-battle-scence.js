@@ -30,29 +30,14 @@ Component({
         'atk' : 100
       }]
     },
-    enemies: {
+    enemy: {
       type: Array,
-      value: [{
+      value: {
         'name': '',
-        'picH': 'https://patchwiki.biligame.com/images/sssj/f/f6/tpi3kpr7lhkstrv4ka70cyyqy2t3nu7.png',
-        'atk' : 100
-      },{
-        'name': '',
-        'picH': 'https://patchwiki.biligame.com/images/sssj/f/f6/tpi3kpr7lhkstrv4ka70cyyqy2t3nu7.png',
-        'atk' : 100
-      },{
-        'name': '',
-        'picH': 'https://patchwiki.biligame.com/images/sssj/f/f6/tpi3kpr7lhkstrv4ka70cyyqy2t3nu7.png',
-        'atk' : 100
-      },{
-        'name': '',
-        'picH': 'https://patchwiki.biligame.com/images/sssj/f/f6/tpi3kpr7lhkstrv4ka70cyyqy2t3nu7.png',
-        'atk' : 100
-      },{
-        'name': '',
-        'picH': 'https://patchwiki.biligame.com/images/sssj/f/f6/tpi3kpr7lhkstrv4ka70cyyqy2t3nu7.png',
-        'atk' : 100
-      }]
+        'pic': 'https://patchwiki.biligame.com/images/sssj/d/df/pde4aj5ih12vne1b6t5hprh75fsexlq.png',
+        'hp' : 4999,
+        'atk' : 450
+      }
     }
   },
 
@@ -61,9 +46,10 @@ Component({
    */
   data: {
     usAttack: Array(5),
-    enAttack: Array(5),
-    usHp: 3000,
-    enHp: 3000,
+    enAttack: '',
+    usHp: 0,
+    usMaxHp: 0,
+    enHp: 0,
   },
 
   /**
@@ -83,6 +69,7 @@ Component({
           }
           // 将战果发送给父组件
           this.triggerEvent('isWin', {isWin}, {});
+          return;
         }
 
         if(count < 5) {
@@ -92,36 +79,46 @@ Component({
             usAttack: this.data.usAttack
           })
           // 战斗数值计算
-          let atk = this.properties.us[count].atk;
+          let atk = this.properties.us[count].props.atk;
           atk = getRandomInt(atk * 0.8, atk * 1.2)
           this.setData({
             enHp: this.data.enHp - atk < 0 ? 0 : this.data.enHp - atk
           })
-
           count ++;
-        } else if(count < 10) {
+        } else if(count < 6) {
           // 敌方攻击动画
-          this.data.enAttack[count - 5] = 'attack';
           this.setData({
-            enAttack: this.data.enAttack
+            enAttack: 'attack'
           })
           // 战斗数值计算
-          let atk = this.properties.enemies[count - 5].atk;
+          let atk = this.properties.enemy.atk;
           atk = getRandomInt(atk * 0.8, atk * 1.2)
           this.setData({
             usHp: this.data.usHp - atk < 0 ? 0 : this.data.usHp - atk
           })
-
           count ++;
         } else {
           // 敌我都攻击完一轮后...
           count = 0;
           this.setData({
             usAttack: Array(5),
-            enAttack: Array(5),
+            enAttack: '',
           })
         } 
       }, 300);
+    }
+  },
+
+  lifetimes: {
+    ready() {
+      for(let mem of this.properties.us) {
+        this.data.usMaxHp += mem.props.hp;
+      }
+      this.setData({
+        usHp: this.data.usMaxHp,
+        usMaxHp: this.data.usMaxHp,
+        enHp: this.properties.enemy.hp
+      })
     }
   }
 })

@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "w-awake-animation" : "../../components/w-awake-animation/w-awake-animation"
+    "w-battle-scence" : "../../components/w-battle-scence/w-battle-scence"
   }
 }

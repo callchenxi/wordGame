@@ -1,4 +1,5 @@
 // miniprogram/pages/battle/battle.js
+import expandTeam from '../../utils/expandTeam.js'
 Page({
 
   /**
@@ -14,6 +15,7 @@ Page({
     msgContent: Object,
     msgShow: false,
     isFight: false,
+    us: Array(),
   },
 
   // 从w-slot-machine组件中获取奖励信息
@@ -78,10 +80,11 @@ Page({
     })
   },
 
-  onLoad: function() {
+  onLoad: function(option) {
     this.setData({
       coin: wx.getStorageSync('coin') || 0,
       diamond: wx.getStorageSync('diamond') || 0,
+      us: expandTeam()
     })
   },
    /**

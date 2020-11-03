@@ -1,3 +1,2 @@
 <!--pages/test/test.wxml-->
-<w-battle-scence us="{{us}}"></w-battle-scence>
-<button bind:tap="handleStart">开始</button>
+<w-reward-msg content="{{content}}" title="{{title}}"></w-reward-msg>

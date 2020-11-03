@@ -8,7 +8,7 @@ Component({
       type: Number,
       // 自动监听,写入更新数据
       observer: function(newVal) {
-        if(newVal > 0) {
+        if(newVal >= 0) {
           wx.setStorageSync('coin', newVal);
         }        
       }
@@ -17,7 +17,7 @@ Component({
       type: Number,
       // 自动监听,写入更新数据
       observer: function(newVal) {
-        if(newVal > 0) {
+        if(newVal >= 0) {
           wx.setStorageSync('diamond', newVal);
         } 
       }

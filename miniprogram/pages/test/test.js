@@ -4,18 +4,12 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
-    us: Array(),
-  },
-
-  handleStart() {
-    let mem = {"sid":10,"level":21,"bid":1,"didNow":0,"did":[0],"num":3,"inTeam":false};
-    
-    var abc = new Member();
-    abc.createNewMem(6);
-    abc.expandMember();
-    console.log(abc);
-    
+  data: {  
+    title: '加油 (ง •̀_•́)ง',
+    content: {
+      coin: 100,
+      diamond: 10,
+    }
   },
 
   /**

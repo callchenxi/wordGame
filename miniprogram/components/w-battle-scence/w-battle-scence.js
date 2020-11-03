@@ -8,27 +8,6 @@ Component({
   properties: {
     us: {
       type: Array,
-      value: [{
-        'name': '',
-        'picH': 'https://patchwiki.biligame.com/images/sssj/9/95/ab5eoqawxe8hf3sf4d6avzx9wu1us6w.png',
-        'atk' : 100
-      },{
-        'name': '',
-        'picH': 'https://patchwiki.biligame.com/images/sssj/3/35/ducyysdxl23z8y5obslz1b7729ha7kj.png',
-        'atk' : 100
-      },{
-        'name': '',
-        'picH': 'https://patchwiki.biligame.com/images/sssj/2/29/f46weht7m1l1tvawbn7fkap6kyzjz55.png',
-        'atk' : 100
-      },{
-        'name': '',
-        'picH': 'https://patchwiki.biligame.com/images/sssj/9/9f/6luzyxgjl1uwjmfngaxki7ke4gbdiqc.png',
-        'atk' : 100
-      },{
-        'name': '',
-        'picH': 'https://patchwiki.biligame.com/images/sssj/5/51/sfqsxim6ugipecled56ynz46se5ve80.png',
-        'atk' : 100
-      }]
     },
     enemy: {
       type: Array,
@@ -58,6 +37,8 @@ Component({
   methods: {
     handleFight() {
       let count = 0;
+      let usLength = this.properties.us.length;
+      let enemyLength = 1;
       clearInterval(timer);
       let timer = setInterval(() => {
         // 判断血量是否为0
@@ -72,7 +53,7 @@ Component({
           return;
         }
 
-        if(count < 5) {
+        if(count < usLength) {
           // 我方攻击动画
           this.data.usAttack[count] = 'attack';
           this.setData({
@@ -85,7 +66,7 @@ Component({
             enHp: this.data.enHp - atk < 0 ? 0 : this.data.enHp - atk
           })
           count ++;
-        } else if(count < 6) {
+        } else if(count < usLength + enemyLength) {
           // 敌方攻击动画
           this.setData({
             enAttack: 'attack'

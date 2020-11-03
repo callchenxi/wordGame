@@ -256,7 +256,7 @@ var json = [
         ch: '这问题实际上从来没有讨论过',
       } ]
   },{
-    wid: 15,
+    wid: 16,
     spelling: 'inherit',
     phoneticSym: '[ɪnˈherɪt]',
     translations: ['[动] 继承; 遗传'],
@@ -272,7 +272,7 @@ var json = [
         ch: '长子将继承爵位',
       } ]
   },{
-    wid: 16,
+    wid: 17,
     spelling: 'museum',
     phoneticSym: '[mjuˈziːəm]',
     translations: ['[名] 博物馆'],
@@ -288,7 +288,7 @@ var json = [
         ch: '科学博物馆',
       } ]
   },{
-    wid: 17,
+    wid: 18,
     spelling: 'spin',
     phoneticSym: '[spɪn]',
     translations: ['[动] 纺(纱); 旋转; 疾驰', '[名] 旋转'],
@@ -304,7 +304,7 @@ var json = [
         ch: '飞机突然旋转起来',
       } ]
   },{
-    wid: 18,
+    wid: 19,
     spelling: 'sum',
     phoneticSym: '[sʌm]',
     translations: ['[名] 总数; 算术; 金额'],
@@ -320,7 +320,7 @@ var json = [
         ch: '五加三的总和是八',
       } ]
   },{
-    wid: 19,
+    wid: 20,
     spelling: 'lower',
     phoneticSym: '[ˈləʊə(r)]',
     translations: ['[动] 降低; 减少', '[形] 较低的; 下游的', '[形] 更低的'],
@@ -336,7 +336,7 @@ var json = [
         ch: '该河的下游区域经常遭遇洪水',
       } ]
   },{
-    wid: 20,
+    wid: 21,
     spelling: 'devote',
     phoneticSym: '[dɪˈvəʊt]',
     translations: ['[动] 投入; 献身'],
@@ -352,7 +352,7 @@ var json = [
         ch: '请把更多的时间用于工作',
       } ]
   },{
-    wid: 21,
+    wid: 22,
     spelling: 'board',
     phoneticSym: '[bɔːd]',
     translations: ['[动] 上船(或火车, 飞机等)', '[名] 板; 董事会'],
@@ -368,7 +368,7 @@ var json = [
         ch: '他在黑板上又写了几条注释',
       } ]
   },{
-    wid: 22,
+    wid: 23,
     spelling: 'loop',
     phoneticSym: '[luːp]',
     translations: ['[动] 使...成环', '[名] 圈; 环'],
@@ -384,7 +384,7 @@ var json = [
         ch: '把电线弯成一个圈',
       } ]
   },{
-    wid: 23,
+    wid: 24,
     spelling: 'abstract',
     phoneticSym: '[ˈæbstrækt]',
     translations: ['[动] 提取; 抽取; 作...的摘要', '[名] 摘要; 概要; 抽象派艺术品', '[形]抽象的; 非具体的; 深奥的'],
@@ -400,7 +400,7 @@ var json = [
         ch: '他的计划太不具体, 无法付诸实施',
       } ]
   },{
-    wid: 24,
+    wid: 25,
     spelling: 'fortnight',
     phoneticSym: '[ˈfɔːtnaɪt]',
     translations: ['[名] 两星期'],
@@ -416,7 +416,7 @@ var json = [
         ch: '两周有十四天',
       } ]
   },{
-    wid: 25,
+    wid: 26,
     spelling: 'graph',
     phoneticSym: '[ɡræf]',
     translations: ['[名] 图标; 曲线图'],
@@ -432,7 +432,7 @@ var json = [
         ch: '在图标上绘出温度曲线',
       } ]
   },{
-    wid: 26,
+    wid: 27,
     spelling: 'missing',
     phoneticSym: '[ˈmɪsɪŋ]',
     translations: ['[形] 失踪的; 失去的', '[动] 想念; 错失;'],
@@ -448,7 +448,7 @@ var json = [
         ch: '警察搜遍树林以寻找失踪的孩子',
       } ]
   },{
-    wid: 27,
+    wid: 28,
     spelling: 'publicity',
     phoneticSym: '[pʌbˈlɪsətis]',
     translations: ['[名] 宣传; 公开; 曝光度'],
@@ -464,7 +464,7 @@ var json = [
         ch: '禁毒宣传',
       } ]
   },{
-    wid: 28,
+    wid: 29,
     spelling: 'chemical',
     phoneticSym: '[ˈkemɪkl]',
     translations: ['[名] 化学品', '[形] 化学的'],
@@ -480,7 +480,7 @@ var json = [
         ch: '我对化学实验很有兴趣',
       } ]
   },{
-    wid: 29,
+    wid: 30,
     spelling: 'court',
     phoneticSym: '[kɔːt]',
     translations: ['[名] 法院; 球场; 宫廷', '[动] 求爱; 献殷勤; 招致'],
@@ -496,7 +496,7 @@ var json = [
         ch: '求宠于来访的贵族',
       } ]
   },{
-    wid: 30,
+    wid: 31,
     spelling: 'stroke',
     phoneticSym: '[strəʊk]',
     translations: ['[名] 一击; 打击; 中风; 轻抚; 划水动作; 钟鸣', '[动] 轻抚'],
@@ -512,7 +512,7 @@ var json = [
         ch: '一道闪电',
       } ]
   },{
-    wid: 31,
+    wid: 32,
     spelling: 'selfish',
     phoneticSym: '[ˈselfɪʃ]',
     translations: ['[形] 自私的'],
@@ -528,7 +528,7 @@ var json = [
         ch: '他是一个自私的人, 不想把车子借给我',
       } ]
   },{
-    wid: 32,
+    wid: 33,
     spelling: 'maintain',
     phoneticSym: '[meɪnˈteɪn]',
     translations: ['[动] 维护; 保持; 供养'],
@@ -544,7 +544,7 @@ var json = [
         ch: '足够食物去维持声明',
       } ]
   },{
-    wid: 33,
+    wid: 34,
     spelling: 'honey',
     phoneticSym: '[ˈhʌni]',
     translations: ['[名] 蜂蜜; 甜蜜; 宝贝'],
@@ -560,7 +560,7 @@ var json = [
         ch: '我们可以用蜂蜜作为糖的替代品',
       } ]
   },{
-    wid: 34,
+    wid: 35,
     spelling: 'automobile',
     phoneticSym: '[ˈɔːtəməbiːl]',
     translations: ['[名] 汽车'],
@@ -576,7 +576,7 @@ var json = [
         ch: '汽车工业',
       } ]
   },{
-    wid: 35,
+    wid: 36,
     spelling: 'living room',
     phoneticSym: '[ˈlɪvɪŋ ruːm]',
     translations: ['[短语] 客厅; 起居室'],
@@ -592,7 +592,7 @@ var json = [
         ch: '我坐在客厅里',
       } ]
   },{
-    wid: 36,
+    wid: 37,
     spelling: 'leading',
     phoneticSym: '[ˈliːdɪŋ]',
     translations: ['[形] 处于领导地位的; 一流的; 主要的', '[动] 带领; 领导'],
@@ -608,7 +608,7 @@ var json = [
         ch: '你在把他引向歧途',
       } ]
   },{
-    wid: 37,
+    wid: 38,
     spelling: 'stir',
     phoneticSym: '[stɜː]',
     translations: ['[动] 搅拌; 搅动; 激起'],
@@ -624,7 +624,7 @@ var json = [
         ch: '把糖搅拌在咖啡里',
       } ]
   },{
-    wid: 38,
+    wid: 39,
     spelling: 'rid',
     phoneticSym: '[rɪd]',
     translations: ['[动] 摆脱; 除去', '[形] 摆脱了的'],
@@ -640,7 +640,7 @@ var json = [
         ch: '把老鼠除掉',
       } ]
   },{
-    wid: 39,
+    wid: 40,
     spelling: 'electric',
     phoneticSym: '[ɪˈlektrɪk]',
     translations: ['[形] 电的; 用电的'],
@@ -656,7 +656,7 @@ var json = [
         ch: '遭到电击',
       } ]
   },{
-    wid: 40,
+    wid: 41,
     spelling: 'lung',
     phoneticSym: '[lʌŋ]',
     translations: ['[名] 肺'],

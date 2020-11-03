@@ -1,5 +1,6 @@
 // pages/exam/exam.js
 import splitEn from '../../utils/splitEn.js';
+import getExamWid from '../../utils/getExamWid.js';
 
 Page({
 
@@ -51,18 +52,24 @@ Page({
     if(str.length == this.data.maxLength) {
       if(this.data.answer == this.data.word.spelling) {
         // 回答正确
+        // 更新learned
+        this.updateLearned(this.data.word.wid);
+        // 给与奖励
+        
         wx.showToast({
           title: '回答正确',
           mask: true,
           duration: 1000,
         });
         // 跳转到下一个词(还未判断是否到最后一个)
-        let wid = parseInt(wx.getStorageSync('examWid')) + 1;
-        setTimeout(() => {
-          wx.redirectTo({      
-            url: '../exam/exam?wid=' + wid,
-          })
-        }, 1100);
+        let wid = getExamWid();
+        if(wid > -1) {
+          setTimeout(() => {
+            wx.redirectTo({      
+              url: '../exam/exam?wid=' + wid,
+            })
+          }, 1100);
+        }
       } else {
         // 回答错误
         wx.showToast({
@@ -73,6 +80,20 @@ Page({
         })
       }
     }    
+  },
+  
+  // wid对应的单词的raid - 1 但 最小为1
+  updateLearned(wid) {    
+    let learned = wx.getStorageSync('learned');
+    for(let item of learned) {
+      if(item.wid == wid) {
+        if(item.raid > 1) {
+          item.raid --;
+          wx.setStorageSync('learned', learned);
+        }
+        return;
+      }
+    }
   },
 
   // 生命周期函数--监听页面加载完成

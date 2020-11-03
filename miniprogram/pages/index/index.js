@@ -1,6 +1,7 @@
 // miniprogram/pages/index/index.js
 import calcTimeReward from '../../utils/calcTimeReward.js';
 import checkWordsEnd from '../../utils/checkWordsEnd.js';
+import getExamWid from '../../utils/getExamWid.js';
 
 Page({
   /**
@@ -59,15 +60,17 @@ Page({
 
   // 页面跳转
   handleToStudy() {
-    let wid = 0;
+    let wid = wx.getStorageSync('studyWid') || 0;
     checkWordsEnd(wid);
   },
 
   handleToExam() {
-    let wid = 0;
-    wx.redirectTo({
-      url: '../exam/exam?wid=' + wid,
-    })
+    let wid = getExamWid();
+    if(wid > -1) {
+      wx.redirectTo({
+        url: '../exam/exam?wid=' + wid,
+      })
+    }
   },
 
   handleToTeam() {

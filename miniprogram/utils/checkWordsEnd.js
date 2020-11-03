@@ -15,5 +15,5 @@ export default function checkWordsEnd(wid) {
     wx.redirectTo({      
       url: '../study/study?wid=' + wid,
     })
-  }    
+  }
 }

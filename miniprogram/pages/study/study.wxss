@@ -1,4 +1,13 @@
 /* pages/study/study.wxss */
+.msg {
+  position: fixed;  
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 30%;
+  z-index: 999;
+  background: #ffffff90;  
+  border-radius: 20rpx;
+}
 .spell-box {
   background-color: aqua;
   text-align: center;
@@ -12,7 +21,7 @@
 
 .trans-box {
   background-color: aqua;
-  padding: 20rpx 0;  
+  padding: 20rpx 10rpx;
   text-indent: 1ch;
 }
 
@@ -27,7 +36,7 @@
   margin-bottom: 20rpx;
 }
 .exps-box .exp {
-  padding-bottom: 20rpx;
+  padding: 0 10rpx 40rpx 10rpx;
 }
 
 .btns-box {
@@ -52,7 +61,7 @@
 .btns-box .vague {
   background-color: orange;
 }
-.btns-box .forget {
+.btns-box .strange {
   background-color: orangered;
 }
 

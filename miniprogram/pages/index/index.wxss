@@ -30,7 +30,7 @@
   right: 100rpx;
   top: 440rpx;
 }
-.buildings .battle {
+.buildings .story {
   right: 150rpx;
   top: 200rpx;
 }

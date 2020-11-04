@@ -14,8 +14,8 @@ Component({
       value: {
         'name': '',
         'pic': 'https://patchwiki.biligame.com/images/sssj/d/df/pde4aj5ih12vne1b6t5hprh75fsexlq.png',
-        'hp' : 16999,
-        'atk' : 1000
+        'hp' : 6999,
+        'atk' : 600
       }
     }
   },

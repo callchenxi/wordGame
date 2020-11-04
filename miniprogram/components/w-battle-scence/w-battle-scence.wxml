@@ -26,7 +26,4 @@
     </view>
   </view>
 </view>
-<block wx:if="{{true}}">
-  <button bind:tap="handleFight">test</button>
-</block>
 

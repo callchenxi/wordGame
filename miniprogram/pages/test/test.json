@@ -1,6 +1,4 @@
 {
   "usingComponents": {
-    "w-battle-scence" : "../../components/w-battle-scence/w-battle-scence",
-    "w-reward-msg" : "../../components/w-reward-msg/w-reward-msg"
   }
 }

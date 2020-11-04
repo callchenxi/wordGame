@@ -1,0 +1,5 @@
+/* miniprogram/pages/story/story.wxss */
+.chapter {
+  width: 750rpx;
+  height: 1200rpx;
+}

@@ -1,0 +1,10 @@
+<!--miniprogram/pages/story/story.wxml-->
+<view class="root-box">
+  <view class="head"></view>
+  <swiper class="chapter" indicator-dots previous-margin="30rpx" next-margin="30rpx">
+    <swiper-item wx:for="{{3}}" wx:key="item">
+      <w-stage-list></w-stage-list>
+    </swiper-item>
+  </swiper>
+  <view class="foot"></view>
+</view>

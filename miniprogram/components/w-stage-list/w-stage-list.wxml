@@ -1,0 +1,20 @@
+<!--components/w-stage-list/w-stage-list.wxml-->
+<view class="chapter-box">
+  <view class="chapter-title">第一章</view>
+  <scroll-view class="stage-list" scroll-y scroll-into-view="{{'stage-' + currentIndex}}">
+    <view class="stage" wx:for="{{12}}" wx:key="item" bind:tap="handleShowDisc" data-index="{{index}}" id="{{'stage-' + index}}">
+      <view class="stage-title">
+        <text>第一关</text>
+      </view>
+      <view class="stage-more {{currentIndex == index ? 'grow' : ''}}"
+            hidden="{{currentIndex == index ? false : true}}">
+        <view class="stage-txt">
+          第一关的故事小结,第一关的故事小结,第一关的故事小结,第一关的故事小结,第一关的故事小结,第一关的故事小结,第一关的故事小结,第一关的故事小结,第一关的故事小结.
+        </view>
+        <view class="btn-box">
+          <button class="btn" bind:tap="handleToBattle">战斗</button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

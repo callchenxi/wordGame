@@ -1,2 +1,1 @@
 <!--pages/test/test.wxml-->
-<w-reward-msg content="{{content}}" title="{{title}}"></w-reward-msg>

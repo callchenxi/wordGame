@@ -1,10 +1,10 @@
 <!--components/w-show-my-members/w-show-my-members.wxml-->
 <view class="stu-box">
   <view>学员一览:</view>
-  <scroll-view class="stu-scroll" scroll-y>
+  <scroll-view class="stu-scroll" scroll-y scroll-into-view="{{'mem-' + currentIndex}}" scroll-with-animation>
     <view class="stu-list">
       <view wx:for="{{showMyMembers}}" wx:key="sid" class="stu {{currentIndex == index ? 'chk-ani' : ''}}" 
-            data-index="{{index}}" bind:tap="handleCheck">
+            data-index="{{index}}" bind:tap="handleCheck" id="{{'mem-' + index}}">
         <view>
           <image src="{{item.picB}}" class="stu-pic pic-border" mode="scaleToFill"></image>  
           <image src="{{item.pic}}" class="stu-pic" mode="scaleToFill"></image>

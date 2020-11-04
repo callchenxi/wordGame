@@ -57,8 +57,8 @@
           "query": ""
         },
         {
-          "name": "dorm",
-          "pathName": "pages/dorm/dorm",
+          "name": "story",
+          "pathName": "pages/story/story",
           "query": "",
           "scene": null
         },

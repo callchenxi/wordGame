@@ -1,0 +1,61 @@
+/* components/w-stage-list/w-stage-list.wxss */
+.chapter-box {
+  width: 620rpx;
+  height: 1200rpx;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  background-color: tomato;
+  padding: 0 30rpx;
+}
+.chapter-box .chapter-title {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 70rpx;
+  text-align: center;
+  background-color: teal;
+}
+.chapter-box .stage-list {
+  height: 1100rpx;
+}
+.stage-list .stage {
+  margin: 20rpx 0;
+  border: 4rpx solid skyblue;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.stage .stage-title {
+  padding: 10rpx 20rpx;
+  background-color: skyblue;
+  border-radius: 10rpx;
+}
+.stage .stage-more {
+  height: 240rpx;
+  padding: 10rpx;
+  font-size: 28rpx;
+}
+.stage .grow {  
+  animation-name: grow;
+  animation-duration: 1s;
+}
+@keyframes grow {
+  from {
+    height: 0;
+  }
+  to {    
+    height: 240rpx;
+  }
+}
+.stage-more .stage-txt {
+  text-indent: 2ch;
+}
+.stage-more .btn-box {
+  display: flex;
+  justify-content: flex-end;
+}
+.stage-more .btn {
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 20rpx 10rpx 0 0;
+  padding: 0;
+}

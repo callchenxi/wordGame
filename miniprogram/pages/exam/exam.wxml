@@ -1,5 +1,7 @@
 <!--pages/exam/exam.wxml-->
 <view class="root-box">
+  <w-wealth-box coin="{{coin}}" diamond="{{diamond}}" />
+  <w-reward-msg title="{{msgTitle}}" content="{{msgContent}}" wx:if="{{msgShow}}" class="msg"/>
   <view class="spell-box" bind:tap="handleShowPhs">
     <view class="spelling">请拼写单词英文</view>
     <view wx:if="{{!phsShow}}" class="phs">点击此处显示音标提示</view>

@@ -1,7 +1,7 @@
 <!--pages/study/study.wxml-->
 <view class="root-box">
   <w-wealth-box coin="{{coin}}" diamond="{{diamond}}" />
-  <w-reward-msg title="{{title}}" content="{{content}}" wx:if="{{msgShow}}" class="msg"/>
+  <w-reward-msg title="{{msgTitle}}" content="{{msgContent}}" wx:if="{{msgShow}}" class="msg"/>
   <view class="spell-box">
     <view class="spelling">{{word.spelling}}</view>
     <view>{{word.phoneticSym}}</view>

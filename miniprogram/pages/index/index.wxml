@@ -1,9 +1,7 @@
 <!--miniprogram/pages/index/index.wxml-->
-<block wx:if="{{msgShow}}">
-  <w-reward-msg title="{{msgTitle}}" content="{{msgContent}}" class="msg"/>
-</block>
 <view class="root-box">
-  <w-wealth-box coin="{{coin}}" diamond="{{diamond}}"></w-wealth-box>
+  <w-wealth-box coin="{{coin}}" diamond="{{diamond}}" />
+  <w-reward-msg title="{{msgTitle}}" content="{{msgContent}}" wx:if="{{msgShow}}" class="msg"/>
   <view class="head"></view>
   <view class="body">
     <view class="buildings">

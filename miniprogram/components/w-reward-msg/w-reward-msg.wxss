@@ -1,15 +1,18 @@
 /* components/w-reward-msg/w-reward-msg.wxss */
 .box {
+  position: fixed;  
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40%;
+  z-index: 999;
   text-align: center;
-  /* background: url('https://vi3.xiu123.cn/live/2020/10/19/14/1003v1603087392995557637.jpg') no-repeat; */
-  /* background-size: 300rpx; */
-  background: #99999990;
+  background: #00000090;
+  color: white;
   border-radius: 20rpx;
   padding: 20rpx;
 }
 
 .box .title {
-  font-weight: 700;
   font-size: 32rpx;
 }
 

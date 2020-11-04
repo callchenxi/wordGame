@@ -9,8 +9,8 @@ Page({
    */
   data: {
     word: undefined,
-    title: '加油 (ง •̀_•́)ง',
-    content: {
+    msgTitle: 'Fighting (ง •̀_•́)ง',
+    msgContent: {
       coin: 100,
       diamond: 10,
     },
@@ -46,8 +46,8 @@ Page({
     wid += 1;
     wx.setStorageSync('studyWid', wid);
     this.setData({
-      coin: this.data.coin + this.data.content.coin,
-      diamond: this.data.diamond + this.data.content.diamond,
+      coin: this.data.coin + this.data.msgContent.coin,
+      diamond: this.data.diamond + this.data.msgContent.diamond,
       msgShow: true,
     })
     setTimeout(() => {

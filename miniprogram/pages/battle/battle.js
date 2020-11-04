@@ -46,7 +46,7 @@ Page({
           // 胜利时弹窗
           setTimeout(() => {
             this.setData({
-              msgTitle: '战斗胜利',
+              msgTitle: 'Victory',
               msgShow: true,
             })
           }, 500)
@@ -54,7 +54,7 @@ Page({
           // 失败时弹窗
           setTimeout(() => {
             this.setData({
-              msgTitle: '战斗失败',
+              msgTitle: 'Fail',
               msgContent: {'txt': '无法获得战利品'},
               msgShow: true,
             })

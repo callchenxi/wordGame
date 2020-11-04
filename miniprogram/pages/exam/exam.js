@@ -14,7 +14,15 @@ Page({
     blank: '_',
     answer: '',
     maxLength: 0,
-    word: undefined,    
+    word: undefined,
+    msgTitle: 'Bingo ヾ(≧▽≦*)o',
+    msgContent: {
+      coin: 100,
+      diamond: 10,
+    },
+    msgShow: false,
+    coin: -1,
+    diamond: -1,
   },
 
   handleShowPhs() {
@@ -55,12 +63,11 @@ Page({
         // 更新learned
         this.updateLearned(this.data.word.wid);
         // 给与奖励
-        
-        wx.showToast({
-          title: '回答正确',
-          mask: true,
-          duration: 1000,
-        });
+        this.setData({
+          coin: this.data.coin + this.data.msgContent.coin,
+          diamond: this.data.diamond + this.data.msgContent.diamond,
+          msgShow: true,
+        })
         // 跳转到下一个词(还未判断是否到最后一个)
         let wid = getExamWid();
         if(wid > -1) {
@@ -73,7 +80,7 @@ Page({
       } else {
         // 回答错误
         wx.showToast({
-          title: '回答错误 (＞﹏＜)',
+          title: 'Wrong (＞﹏＜)',
           icon: 'none',
           mask: true,
           duration: 600,
@@ -104,6 +111,9 @@ Page({
     this.setData({
       // 调用接口3分割例句, 分离出目标单词
       word: splitEn(words[options.wid]),
+
+      coin: wx.getStorageSync('coin') || 0,
+      diamond: wx.getStorageSync('diamond') || 0,
     })
 
     // 将目标单词替换为下划线

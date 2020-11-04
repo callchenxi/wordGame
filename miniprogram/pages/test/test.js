@@ -9,6 +9,13 @@ Page({
     content: {
       coin: 100,
       diamond: 10,
+      medal: 999,
+      treasure: {
+        num: 1,
+        coin: 2009,
+        diamond: 9999,
+        medal: 9999
+      }
     }
   },
 

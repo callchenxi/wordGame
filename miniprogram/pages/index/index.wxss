@@ -1,12 +1,4 @@
 /* miniprogram/pages/index/index.wxss */
-.msg {
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 40%;
-  z-index: 999;
-}
-
 .buildings {
   position: relative;
   height: 1000rpx;

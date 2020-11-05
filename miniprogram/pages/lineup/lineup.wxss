@@ -1,6 +1,25 @@
 /* miniprogram/pages/lineup/lineup.wxss */
+.title {
+  font-size: 80rpx;
+  text-align: center;
+  transform: scale(1.5);
+  opacity: 0;
+  animation: zoomin .7s .5s ease-out forwards;
+}
+@keyframes zoomin {
+  from {transform: scale(1.5); opacity: 0;}
+  80% {transform: scale(.8); opacity: 1;}
+  to {transform: scale(1); opacity: 1;}
+}
 .team-box {
   position: relative;
+  top: -70%;
+  animation: topin .7s ease-out forwards;
+}
+@keyframes topin {
+  from {top: -70%;}
+  80% {top: 3%;}
+  to {top: 0;}
 }
 .team-list {
   display: flex;
@@ -56,4 +75,37 @@
 
 .props .def-txt {
   color: blue;
+}
+
+.props .up {
+  color: gold
+}
+.props .down {
+  color: gray
+}
+.props-box .buff {
+  width: 600rpx;
+  margin: 0 auto;
+}
+.txt-0 {
+  color: goldenrod;
+}
+.txt-1 {
+  color: skyblue;
+}
+.txt-2 {
+  color: plum;
+}
+.txt-3 {
+  color: greenyellow;
+}
+.cpn-members {
+  position: relative;
+  top: 60%;
+  animation: bottomin .7s ease-out forwards;
+}
+@keyframes bottomin {
+  from {top: 60%;}
+  80% {top: -3%;}
+  to {top: 0;}
 }

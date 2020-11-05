@@ -20,6 +20,9 @@
       <view>Hp: {{expandMem.props.hp}}</view>
       <view>攻击: {{expandMem.props.atk}}</view>
       <view>防御: {{expandMem.props.def}}</view>
+      <view>技能:
+        <view>{{expandMem.skill.txt}}</view>
+      </view>
       <view>
         <image src="../../images/fragment.svg" class="icon"/>
         : {{expandMem.num}}

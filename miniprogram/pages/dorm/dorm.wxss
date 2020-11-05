@@ -3,8 +3,16 @@
   height: 50rpx;
 }
 .char-box {
+  position: relative;
   display: flex;
-  height: 650rpx
+  height: 650rpx;
+  top: -70%;
+  animation: topin .7s ease-out forwards;
+}
+@keyframes topin {
+  from {top: -70%;}
+  80% {top: 3%;}
+  to {top: 0;}
 }
 .char-box .pic-box {
   position: relative;
@@ -64,4 +72,14 @@
 .btn-box .icon-s {
   width: 30rpx;
   height: 30rpx;
+}
+.cpn-members {
+  position: relative;
+  top: 60%;
+  animation: bottomin .7s ease-out forwards;
+}
+@keyframes bottomin {
+  from {top: 60%;}
+  80% {top: -3%;}
+  to {top: 0;}
 }

@@ -33,7 +33,7 @@
   padding: 10rpx;
   font-size: 28rpx;
 }
-.stage .grow {  
+.stage .grow {
   animation-name: grow;
   animation-duration: 1s;
 }

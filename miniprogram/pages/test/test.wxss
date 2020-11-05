@@ -1,1 +1,5 @@
 /* pages/test/test.wxss */
+.chapter {
+  width: 750rpx;
+  height: 1200rpx;
+}

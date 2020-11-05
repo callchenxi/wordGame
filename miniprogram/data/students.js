@@ -31,7 +31,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/7/7f/i8fz7tdmv0x0avp6knyxme2pb81dg7y.png',
       }
     ],
-    skill: [],
+    skid: 12,
   },{
     sid: 1,
     name: '格兰尼',
@@ -62,7 +62,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/2/28/05nonc1tjnzifjv6tiu9w9anouu6vya.png',
       }
     ],
-    skill: [],
+    skid: 0,
   },{
     sid: 2,
     name: '沐恩',
@@ -93,7 +93,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/9/94/m7zdei3svyd5j3vaifgjlcjum6b20xg.png',
       }
     ],
-    skill: [],
+    skid: 1,
   },{
     sid: 3,
     name: '艾琳',
@@ -124,7 +124,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/a/ae/6fec1t3tm1yn1e8jbnnl22v60gtk44c.png',
       }
     ],
-    skill: [],
+    skid: 2,
   },{
     sid: 4,
     name: '伊珂丝',
@@ -155,7 +155,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/b/bb/n78dpaosl14w4ve78wpu4sjv29mh8wc.png',
       }
     ],
-    skill: [],
+    skid: 3,
   },{
     sid: 5,
     name: '朱诺',
@@ -186,7 +186,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/5/5d/3prna3y9a8apywmamsyls27f6ko6o2w.png',
       }
     ],
-    skill: [],
+    skid: 4,
   },{
     sid: 6,
     name: '时无忧',
@@ -217,7 +217,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/8/81/pp8pkyk7dww9cfyr20j4lm589w9rffg.png',
       }
     ],
-    skill: [],
+    skid: 13,
   },{
     sid: 7,
     name: '洛可可',
@@ -248,7 +248,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/b/b6/6hns6414zoquwmlzegf5x6q2q5c97xr.png',
       }
     ],
-    skill: [],
+    skid: 5,
   },{
     sid: 8,
     name: '琳达',
@@ -279,7 +279,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/0/0d/1ezpyljz46dqsoa58bu8427fe1683bw.png',
       }
     ],
-    skill: [],
+    skid: 6,
   },{
     sid: 9,
     name: '高奈莉娅',
@@ -310,7 +310,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/7/79/im9zwsw9gkavhh762ibg9nro908ynbk.png',
       }
     ],
-    skill: [],
+    skid: 7,
   },{
     sid: 10,
     name: '苏小贞',
@@ -341,7 +341,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/0/0b/9gctciijfpoton4mrs2uvqawohhyyp0.png',
       }
     ],
-    skill: [],
+    skid: 8,
   },{
     sid: 11,
     name: '千姬',
@@ -372,7 +372,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/5/50/il1zqxosopi3yeicre5my48tmvwou48.png',
       }
     ],
-    skill: [],
+    skid: 9,
   },{
     sid: 12,
     name: '聂诗柔',
@@ -403,7 +403,7 @@ var json = [
         pic: 'https://patchwiki.biligame.com/images/sssj/4/4a/2yp2w08e16rhazp0gdim625lgj6l2ib.png',
       }
     ],
-    skill: [],
+    skid: 10,
   }
 ]
 

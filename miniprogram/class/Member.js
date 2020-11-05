@@ -25,6 +25,7 @@ export default class Member {
   expandMember() {
     let students = require('../data/students.js').studentsJson;
     let borders = require('../data/borders.js').bordersJson;
+    let skills = require('../data/skills.js').skillsJson;
     this.name = students[this.sid].name;
     this.pic = students[this.sid].dress[this.didNow].pic;
     this.picB = borders[this.bid].picB;
@@ -34,5 +35,6 @@ export default class Member {
     this.props.hp = students[this.sid].props.hp + students[this.sid].props.hpRate * (this.level - 1); 
     this.props.atk = students[this.sid].props.atk + students[this.sid].props.atkRate * (this.level - 1); 
     this.props.def = students[this.sid].props.def + students[this.sid].props.defRate * (this.level - 1);
+    this.skill = skills[students[this.sid].skid];
   }
 }

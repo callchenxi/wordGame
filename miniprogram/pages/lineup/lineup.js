@@ -1,6 +1,6 @@
 // miniprogram/pages/lineup/lineup.js
-import Member from '../../class/Member.js'
 import expandTeam from '../../utils/expandTeam.js';
+import calcBuff from '../../utils/calcBuff.js';
 Page({
 
   /**
@@ -11,93 +11,46 @@ Page({
     hpSum: 0,
     atkSum: 0,
     defSum: 0,
+    showBuff: Array(),
+    arrow: [0, 0, 0],
+    isReady: false,   //  通过该标记,使得第一次进入页面时无入队动画
+  },
+
+  handleRemove(e) {
+    console.log(e.currentTarget.dataset.index);
+    let index = e.currentTarget.dataset.index;
+    let myMembers = wx.getStorageSync('myMembers');
+    for(let i in myMembers) {
+      if(this.data.showTeam[index].sid == myMembers[i].sid) {
+        index = i;
+        break;
+      }
+    }
+    this.selectComponent('.cpn-members').showInTeam(index);
+    this.handleReflash();
   },
 
   handleReflash() {
     this.setData({
       showTeam: expandTeam()
     })
-    this.calcPropsAni();
-  },
-
-  showTeam() {
-    let showTeam = new Array()
-    let team = wx.getStorageSync('team');
-    let myMembers = wx.getStorageSync('myMembers');
-    for(let teamMem of team) {
-      for(let mem of myMembers) {
-        if(teamMem.sid == mem.sid) {
-          let newMem = new Member(mem);
-          newMem.expandMember();
-          showTeam.push(newMem)
-        }
-      }
-    }
     this.setData({
-      showTeam
-    })
+      showBuff: calcBuff(this.data.showTeam)
+    }) 
+    this.calcProps();
   },
 
   calcPropsAni() {
+    let arrow = [0, 0, 0];
     let oldHp = this.data.hpSum;
     let oldAtk = this.data.atkSum;
     let oldDef = this.data.defSum;
-
-    let hpSum = 0;
-    let atkSum = 0;
-    let defSum = 0;
-
-    for(let member of this.data.showTeam) {
-      hpSum += member.props.hp;
-      atkSum += member.props.atk;
-      defSum += member.props.def;
-    }
-
-    // Hp变化动画
-    let timerHp = setInterval(() => {
-      if(oldHp == hpSum) {
-        clearInterval(timerHp);
-      } else if(oldHp > hpSum) {
-        oldHp -= 20;
-      } else {
-        oldHp += 20;
-      }  
-      this.setData({
-        hpSum: oldHp
-      })
-    }, 5);
-
-    // Atk变化动画
-    let timerAtk = setInterval(() => {
-      if(oldAtk == atkSum) {
-        clearInterval(timerAtk);
-      } else if(oldAtk > atkSum) {
-        oldAtk -= 2;
-      } else {
-        oldAtk += 2;
-      }  
-      this.setData({
-        atkSum: oldAtk
-      })
-    }, 5);
-
-    // Def变化动画
-    let timerDef = setInterval(() => {
-      if(oldDef == defSum) {
-        clearInterval(timerDef);
-      } else if(oldDef > defSum) {
-        oldDef -= 2;
-      } else {
-        oldDef += 2;
-      }  
-      this.setData({
-        defSum: oldDef
-      })
-    }, 5);
-
+    this.calcProps()
+    arrow[0] = this.getArrowDirect(this.data.hpSum, oldHp);
+    arrow[1] = this.getArrowDirect(this.data.atkSum, oldAtk);
+    arrow[2] = this.getArrowDirect(this.data.defSum, oldDef);
     this.setData({
-      atkSum,
-      defSum,
+      arrow
     })
   },
 
@@ -119,13 +72,28 @@ Page({
     })
   },
 
-  onLoad(options) {
-    this.setData({
-      showTeam: expandTeam()
-    })
-    this.calcProps();
+  getArrowDirect(newValue, oldValue) {
+    if(newValue > oldValue) {
+      return 1;
+    } else if (newValue == oldValue) {
+      return 0;
+    } else {
+      return -1;
+    }
   },
 
+  // 写在onLoad会卡, 写在onReady就不会
+  onReady() {
+    this.setData({
+      showTeam: expandTeam(),
+    })
+    this.setData({
+      showBuff: calcBuff(this.data.showTeam),
+      isReady: true
+    })
+
+    this.calcProps()
+  },
   /**
    * 用户点击右上角分享
    */

@@ -1,12 +1,13 @@
 <!--miniprogram/pages/lineup/lineup.wxml-->
-<view class="team-box">
+<view class="root-box">
+  <view class="head"></view>
+  <view class="title">战斗编队</view>
+  <view class="team-box">
     <view>队伍配置:</view>
     <view class="team-list">
-      <view wx:for="{{showTeam}}" wx:key="sid" class="team chk-ani" data-index="{{index}}">
-        <view>
-          <image src="{{item.picB}}" class="team-pic pic-border" mode="widthFix"></image>        
-          <image src="{{item.pic}}" class="team-pic" mode="widthFix"></image>
-        </view>        
+      <view wx:for="{{showTeam}}" wx:key="sid" class="team {{isReady? 'chk-ani' : ''}}" data-index="{{index}}" bind:tap="handleRemove">
+        <image src="{{item.picB}}" class="team-pic pic-border"></image>        
+        <image src="{{item.pic}}" class="team-pic"></image>
       </view>
       <view wx:for="{{5 - showTeam.length}}" wx:key="sid" class="team">   
         <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1199103174,3548828166&fm=26&gp=0.jpg" 
@@ -14,12 +15,32 @@
       </view>      
     </view>
     <view class="props-box">
-      <view>队伍配置:</view>
+      <view>属性:</view>
       <view class="props">
-        <text class="hp-txt">Hp: {{hpSum}}</text>        
-        <text class="atk-txt">攻击: {{atkSum}}</text>        
-        <text class="def-txt">防御: {{defSum}}</text>        
+        <view class="hp-txt">Hp: {{hpSum}}
+          <text class="up" hidden="{{arrow[0] != 1}}"> ⬆</text>
+          <text class="down" hidden="{{arrow[0] != -1}}"> ⬇</text>
+        </view>        
+        <view class="atk-txt">攻击: {{atkSum}}
+          <text class="up" hidden="{{arrow[1] != 1}}"> ⬆</text>
+          <text class="down" hidden="{{arrow[1] != -1}}"> ⬇</text>
+        </view>        
+        <view class="def-txt">防御: {{defSum}}
+          <text class="up" hidden="{{arrow[2] != 1}}"> ⬆</text>
+          <text class="down" hidden="{{arrow[2] != -1}}"> ⬇</text>
+        </view>        
+      </view>
+      <view>BUFF:</view>
+      <view class="buff">
+        <view wx:for="{{showBuff}}" wx:key="item">
+          对战<text class="{{'txt-' + index}}">{{item.txt}}</text>系敌人时, 增伤{{item.increase}}%, 免伤{{item.decrease}}%
+        </view>
       </view>
     </view>
   </view>
-<w-show-my-members type="team" bind:reflash="handleReflash"></w-show-my-members>
+  <view class="body-blank"></view>
+  <view class="body-blank"></view>
+  <w-show-my-members type="team" bind:reflash="handleReflash" class="cpn-members"></w-show-my-members>
+  <view class="foot"></view>
+</view>
+

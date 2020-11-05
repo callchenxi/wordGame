@@ -2,9 +2,9 @@
 <view class="root-box">
   <w-wealth-box coin="{{coin}}" diamond="{{diamond}}"></w-wealth-box>
   <view class="mask" hidden="{{maskHid}}"></view>
-  <view class="body-blank"></view>
-  <view class="title">社团招新</view>  
-  <view class="body-blank"></view>
+  <view class="head"></view>
+  <view class=".body-blank"></view>
+  <view class="title">社团招新</view>
   <view class="cards-box">
     <image class="cards" src="../../images/cards-back.png" mode="aspectFill"></image>
     <image class="temp-card" src="{{cardSrc}}"  mode="aspectFill" style="{{cardStyle}}"></image>
@@ -13,8 +13,7 @@
         <image class="nine-img" src="{{item.src}}" mode="widthFix"></image>
         <image class="cover" src="{{cardSrc}}" mode="aspectFill" style="{{item.style}}"></image>
       </view>
-    </view>
-    
+    </view>    
     <button bind:tap="handleConfirm" hidden="{{btnHid}}" class="confirm-btn">确定</button>
   </view>
   <view class="body-blank"></view>  

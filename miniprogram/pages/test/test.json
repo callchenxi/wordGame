@@ -1,4 +1,5 @@
 {
   "usingComponents": {
+    "w-stage-list": "../../components/w-stage-list/w-stage-list"
   }
 }

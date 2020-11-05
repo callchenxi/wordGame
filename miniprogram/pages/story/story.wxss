@@ -1,5 +1,52 @@
 /* miniprogram/pages/story/story.wxss */
-.chapter {
-  width: 750rpx;
-  height: 1200rpx;
+.root-box .bg-map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: sepia(.7) blur(2rpx) brightness(.3);
+  z-index: -9;
+}
+.tower-box {
+  position: absolute;
+  left: -500rpx;
+  width: 500rpx;
+  height: 150rpx;
+  background-color: tomato;
+  border-radius: 20rpx;
+  animation: .7s forwards slidein;
+}
+.tower-box .title {
+  font-size: 40rpx;
+  text-align: center;
+  margin: 10rpx 0;
+}
+.tower-box .btn-box {
+  display: flex;
+}
+.btn-box .btn {
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0;
+}
+.lazy {
+  top: 200rpx;
+  animation-delay: .2s;
+}
+.proc {
+  top: 400rpx;
+  animation-delay: .3s;
+}
+.give-up {
+  top: 600rpx;
+  animation-delay: .4s;
+}
+.careless {
+  top: 800rpx;
+  animation-delay: .5s;
+}
+@keyframes slidein {
+  0% { left: -500rpx;}
+  60% {left: 140rpx;}
+  100% {left: 124rpx;}
 }

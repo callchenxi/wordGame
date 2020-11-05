@@ -32,7 +32,7 @@ Page({
       return;
     }
     this.data.getSid = new Array();
-    let str = 'opacity: 1;transform: scale(1.25); transition: opacity 0.6s, transform 1s';
+    let str = 'animation: 1.5s ease-out shining; opacity: 1;transform: scale(1.25); transition: opacity 0.6s, transform 1s';
     this.setData({
       maskHid: false,
       cardStyle: str,
@@ -127,7 +127,7 @@ Page({
     return new Promise ((resolve, reject) => {
       let count = 0
       let timer = setInterval(()=>{  
-        cards[count].style = 'opacity: 0; transition: all ease-in 1s';
+        cards[count].style = 'opacity: 0; transition: all ease-in 2s';
         this.setData({
           cardsNine: cards
         })

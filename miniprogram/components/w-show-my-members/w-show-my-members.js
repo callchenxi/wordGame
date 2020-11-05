@@ -34,17 +34,16 @@ Component({
       })
 
       if(this.properties.type == 'team') {
-        this.showInTeam(e);        
+        this.showInTeam(index);        
         this.triggerEvent('reflash', {}, {});
       } else if(this.properties.type == 'grow') {
-        let member = this.showInGrow(e);
+        let member = this.showInGrow(index);
         this.triggerEvent('reflash', {member}, {});
       }
     },
 
     // 在编组界面中显示现有成员
-    showInTeam(e) {
-      let index = e.currentTarget.dataset.index;
+    showInTeam(index) {
       // 判断该成员是否在队伍中
       if(!this.data.showMyMembers[index].inTeam) {
          // 判断队伍是否已满
@@ -81,9 +80,8 @@ Component({
     },
 
     // 在成长界面中显示现有成员
-    showInGrow(e) {
-      let i = e.currentTarget.dataset.index;
-      return this.data._myMembers[i];
+    showInGrow(index) {
+      return this.data._myMembers[index];
     },
 
     // 显示所有拥有的成员

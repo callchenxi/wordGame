@@ -4,11 +4,13 @@
     <view class="hp-box">
       <progress stroke-width="30rpx" border-radius="30rpx" active 
                 active-mode="forwards" activeColor="#EBEBEB" backgroundColor="#AE0000" 
-                class="hp-bar" percent="{{100 - enHp / enemy.hp * 100}}"></progress>
-      <text class="hp-txt">{{enHp}}/{{enemy.hp}}</text>  
+                class="hp-bar" percent="{{100 - enHp / enemy.props.hp * 100}}"></progress>
+      <text class="hp-txt">{{enHp}}/{{enemy.props.hp}}</text>
+      <view class="damage {{flag == 1? 'damage-ani' : ''}}">-{{damage}}</view>
     </view>
     <view class="pic-box {{enAttack}}">
-      <image src="{{enemy.pic}}" class="pic" mode="scaleToFill"></image>
+      <image src="{{enemy.pic}}" class="pic" mode="scaleToFill"></image>      
+      <view class="race">{{buff.txt}}</view>
     </view>
   </view>
   <view class="us">
@@ -22,7 +24,8 @@
       <progress stroke-width="30rpx" border-radius="30rpx" active 
                 active-mode="forwards" activeColor="#EBEBEB" backgroundColor="#09BB07" 
                 class="hp-bar" percent="{{100 - usHp / usMaxHp * 100}}"></progress>
-      <text class="hp-txt">{{usHp}}/{{usMaxHp}}</text>  
+      <text class="hp-txt">{{usHp}}/{{usMaxHp}}</text>
+      <view class="damage {{flag == -1? 'damage-ani' : ''}}">-{{damage}}</view>
     </view>
   </view>
 </view>

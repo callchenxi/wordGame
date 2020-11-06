@@ -1,32 +1,12 @@
 <!--miniprogram/pages/story/story.wxml-->
 <view class="root-box">
   <image class="bg-map" src="https://vi0.xiu123.cn/live/2020/10/19/11/1003v1603076574723755262.jpg"></image>
-  <view class="tower-box lazy">
-    <view class="title">懒惰之塔 Laziness</view>
+  <view class="tower-box {{'tower-' + index}}" wx:for="{{towers}}" wx:key="item">
+    <view class="title">{{item}}</view>
     <view class="btn-box">
       <button class="btn">扫荡</button>
-      <button class="btn">下一层</button>
-    </view>
-  </view>
-  <view class="tower-box proc">
-    <view class="title">拖延之塔 Procrastination</view>
-    <view class="btn-box">
-      <button class="btn">扫荡</button>
-      <button class="btn">下一层</button>
-    </view>
-  </view>
-  <view class="tower-box give-up">
-    <view class="title">放弃之塔 Giving up</view>
-    <view class="btn-box">
-      <button class="btn">扫荡</button>
-      <button class="btn">下一层</button>
-    </view>
-  </view>
-  <view class="tower-box careless">
-    <view class="title">马虎之塔 Carelessness</view>
-    <view class="btn-box">
-      <button class="btn">扫荡</button>
-      <button class="btn">下一层</button>
+      <view>{{floor[index]}}F</view>
+      <button class="btn" bind:tap="handleFight" data-index="{{index}}">下一层</button>
     </view>
   </view>
 </view>

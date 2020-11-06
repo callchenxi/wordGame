@@ -29,19 +29,19 @@
   line-height: 60rpx;
   padding: 0;
 }
-.lazy {
+.tower-0 {
   top: 200rpx;
   animation-delay: .2s;
 }
-.proc {
+.tower-1 {
   top: 400rpx;
   animation-delay: .3s;
 }
-.give-up {
+.tower-2 {
   top: 600rpx;
   animation-delay: .4s;
 }
-.careless {
+.tower-3 {
   top: 800rpx;
   animation-delay: .5s;
 }

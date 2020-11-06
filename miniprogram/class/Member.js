@@ -33,8 +33,11 @@ export default class Member {
     this.needFrag = borders[this.bid].needFrag;
     this.props = new Object()
     this.props.hp = students[this.sid].props.hp + students[this.sid].props.hpRate * (this.level - 1); 
+    this.props.hp = Math.round(this.props.hp);
     this.props.atk = students[this.sid].props.atk + students[this.sid].props.atkRate * (this.level - 1); 
+    this.props.atk = Math.round(this.props.atk);
     this.props.def = students[this.sid].props.def + students[this.sid].props.defRate * (this.level - 1);
+    this.props.def = Math.round(this.props.def);
     this.skill = skills[students[this.sid].skid];
   }
 }

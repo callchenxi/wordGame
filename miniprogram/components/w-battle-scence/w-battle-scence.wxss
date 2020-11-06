@@ -14,7 +14,13 @@
 }
 .battle-scence .us {
   position: absolute;
-  bottom: 0;
+  bottom: -100%;
+  animation: bottomin .7s ease-out forwards;
+}
+@keyframes bottomin {
+  from {bottom: -100%;}
+  80% {bottom: 10%;}
+  to {bottom: 0;}
 }
 .battle-scence .us .pic {
   width: 140rpx;
@@ -57,11 +63,15 @@
   transform: translate(-50%);
   font-size: 30rpx;
 }
-
-
 .battle-scence .enemy {
   position: absolute;
-  top: 0;
+  top: -100%;
+  animation: topin .7s ease-out forwards;
+}
+@keyframes topin {
+  from {top: -100%;}
+  80% {top: 10%;}
+  to {top: 0;}
 }
 .enemy .pic-box {
   display: flex;
@@ -89,5 +99,40 @@
   }
   to{
     top: 40rpx;
+  }
+}
+.enemy .race {
+  position: absolute;
+  bottom: 4rpx;
+  right: 16rpx;
+}
+.damage {
+  position: absolute;
+  top: -10rpx;
+  right: 20%;
+  color: brown;
+  font-weight: 700;
+  opacity: 0;
+  z-index: 99;
+}
+.damage-ani {
+  animation: bloody .3s ease-out forwards;
+}
+@keyframes bloody {
+  0% {
+    opacity: .5;
+    transform: scale(.3);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.5) translate(16rpx, 32rpx);    
+  }
+  80% {
+    opacity: .8;
+    transform: scale(1.5) translate(16rpx, 35rpx);    
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5) translate(16rpx, 38rpx);
   }
 }

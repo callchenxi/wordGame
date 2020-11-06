@@ -6,12 +6,12 @@ var json = [
     name: '时无暇',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 140,
-      atkRate: 14,
-      def: 20,
-      defRate: 4,
+      hp: 200,
+      hpRate: 20,
+      atk: 168,
+      atkRate: 16.8,
+      def: 48,
+      defRate: 4.8,
     },
     dress: [
       {
@@ -37,12 +37,12 @@ var json = [
     name: '格兰尼',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 10,
-      def: 60,
-      defRate: 6,
+      hp: 200,
+      hpRate: 20,
+      atk: 154,
+      atkRate: 15.4,
+      def: 54,
+      defRate: 5.4,
     },
     dress: [
       {
@@ -68,11 +68,11 @@ var json = [
     name: '沐恩',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 10,
-      def: 80,
+      hp: 200,
+      hpRate: 20,
+      atk: 140,
+      atkRate: 14,
+      def: 60,
       defRate: 6,
     },
     dress: [
@@ -99,12 +99,12 @@ var json = [
     name: '艾琳',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 10,
-      def: 80,
-      defRate: 6,
+      hp: 200,
+      hpRate: 20,
+      atk: 126,
+      atkRate: 12.6,
+      def: 66,
+      defRate: 6.6,
     },
     dress: [
       {
@@ -130,12 +130,12 @@ var json = [
     name: '伊珂丝',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 12,
-      def: 50,
-      defRate: 4,
+      hp: 200,
+      hpRate: 20,
+      atk: 112,
+      atkRate: 11.2,
+      def: 72,
+      defRate: 7.2,
     },
     dress: [
       {
@@ -161,11 +161,11 @@ var json = [
     name: '朱诺',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 10,
-      def: 80,
+      hp: 260,
+      hpRate: 26,
+      atk: 112,
+      atkRate: 11.2,
+      def: 60,
       defRate: 6,
     },
     dress: [
@@ -192,12 +192,12 @@ var json = [
     name: '时无忧',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 4,
-      def: 80,
-      defRate: 10,
+      hp: 240,
+      hpRate: 24,
+      atk: 126,
+      atkRate: 12.6,
+      def: 60,
+      defRate: 6,
     },
     dress: [
       {
@@ -223,11 +223,11 @@ var json = [
     name: '洛可可',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 10,
-      def: 80,
+      hp: 180,
+      hpRate: 18,
+      atk: 154,
+      atkRate: 15.4,
+      def: 60,
       defRate: 6,
     },
     dress: [
@@ -254,12 +254,12 @@ var json = [
     name: '琳达',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 10,
-      def: 80,
-      defRate: 2,
+      hp: 160,
+      hpRate: 16,
+      atk: 168,
+      atkRate: 16.8,
+      def: 60,
+      defRate: 6,
     },
     dress: [
       {
@@ -285,12 +285,12 @@ var json = [
     name: '高奈莉娅',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 10,
-      def: 80,
-      defRate: 8,
+      hp: 260,
+      hpRate: 26,
+      atk: 140,
+      atkRate: 14,
+      def: 48,
+      defRate: 4.8,
     },
     dress: [
       {
@@ -316,12 +316,12 @@ var json = [
     name: '苏小贞',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 10,
-      def: 80,
-      defRate: 8,
+      hp: 240,
+      hpRate: 24,
+      atk: 140,
+      atkRate: 14,
+      def: 54,
+      defRate: 5.4,
     },
     dress: [
       {
@@ -347,12 +347,12 @@ var json = [
     name: '千姬',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 10,
-      def: 80,
-      defRate: 8,
+      hp: 180,
+      hpRate: 18,
+      atk: 140,
+      atkRate: 14,
+      def: 66,
+      defRate: 6.6,
     },
     dress: [
       {
@@ -378,12 +378,12 @@ var json = [
     name: '聂诗柔',
     dis: '这是一段介绍',
     props: {
-      hp: 1000,
-      hpRate: 100,
-      atk: 100,
-      atkRate: 10,
-      def: 80,
-      defRate: 8,
+      hp: 160,
+      hpRate: 16,
+      atk: 140,
+      atkRate: 14,
+      def: 72,
+      defRate: 7.2,
     },
     dress: [
       {

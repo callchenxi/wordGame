@@ -107,7 +107,6 @@ Page({
   onLoad: function(options) {   
     // 获取页面需要加载的单词     
     let words = require('../../data/words.js').wordsJson;
-    wx.setStorageSync('examWid', options.wid);
     this.setData({
       // 调用接口3分割例句, 分离出目标单词
       word: splitEn(words[options.wid]),

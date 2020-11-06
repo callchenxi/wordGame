@@ -1,5 +1,6 @@
 <!--pages/test/test.wxml-->
 <view class="root-box">
+  <view>手机性能:{{num}}</view>
   <view class="head"></view>
   <swiper class="chapter" indicator-dots previous-margin="30rpx" next-margin="30rpx">
     <swiper-item wx:for="{{3}}" wx:key="item">

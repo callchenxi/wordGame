@@ -16,7 +16,8 @@ Page({
         diamond: 9999,
         medal: 9999
       }
-    }
+    },
+    num: -99,
   },
 
   /**
@@ -25,6 +26,13 @@ Page({
   onLoad: function (options) {
     this.setData({
       us: expandTeam()
+    })
+    wx.getSystemInfo({
+      success: (res) => {
+        this.setData({
+          num: res.benchmarkLevel || -99
+        })
+      }
     })
   },
 
